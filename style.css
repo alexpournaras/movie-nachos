@@ -1,0 +1,609 @@
+body {
+	background-color: #121212;
+	color: #fff;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	min-width: 300px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	height: 80px;
+	background-color: #121212;
+}
+
+.logo-container {
+	text-align: center;
+	flex-grow: 1;
+}
+
+.logo {
+	max-width: 200px;
+	padding: 0px 20px 0px 20px;
+}
+
+.menu-nav {
+	flex-grow: 1;
+}
+
+.header-social {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.social-link {
+	padding: 12px;
+	cursor: pointer;
+}
+
+.series h2::after {
+	content: '';
+	height: 1px;
+	width: 50%;
+	display: inline-grid;
+	margin-left: 20px;
+	position: relative;
+	bottom: 9px;
+	background: #c9c9c9;
+}
+
+.menu-links {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-link {
+	font-size: larger;
+	text-decoration: none;
+	color: white;
+	margin: 0 10px;
+	padding: 0px 5px 0px 5px;
+	white-space: nowrap;
+}
+
+.menu-link:hover {
+	color: orange;
+}
+
+.active-link {
+	color: red;
+}
+
+.featured-movies-title {
+	text-align: center;
+}
+
+.slider {
+	position: relative;
+	/* make the slider a positioning context for the buttons */
+
+	width: 100%;
+	/* make the slider fill the entire width of the header */
+	height: 100%;
+	/* make the slider fill the entire height of the screen */
+
+	/* other styles for the slider */
+
+}
+
+.slider-button {
+	position: absolute;
+	/* position the buttons absolutely within the slider */
+	top: 50%;
+	/* position the buttons vertically at the center of the slider */
+	transform: translateY(-50%);
+	/* horizontally align the buttons at the center of the slider */
+	/* other styles for the buttons */
+}
+
+.slider-button.left {
+	left: 0;
+	/* position the left button at the left of the slider */
+	/* other styles for the left button */
+}
+
+.slider-button.right {
+	right: 0;
+	/* position the right button at the right of the slider */
+	/* other styles for the right button */
+}
+
+.text-button {
+	position: absolute;
+	/* position the text and button absolutely within the slider */
+	left: 50px;
+	/* position the text and button 50px to the right of the left arrow button */
+	top: 50%;
+	/* position the text and button vertically at the center of the slider */
+	transform: translateY(-50%);
+	/* horizontally align the text and button at the center of the slider */
+	/* other styles for the text and button */
+}
+
+.slider-section {
+	height: 600px;
+	/* set the height of the slider section to 500px */
+	width: 100%;
+	/* set the width of the slider section to 100% of the parent element */
+	background-color: gray;
+	/* set the background color of the slider section to light gray */
+}
+
+
+.featured-movies-container {
+	display: flex;
+	/* display the featured movie elements in a flex container */
+	justify-content: center;
+	/* flex-wrap: wrap;  */
+	/* other styles for the featured movies container */
+}
+
+.featured-movie {
+	/* other styles for the featured movie element */
+	background-color: #242323;
+	margin: 2px;
+
+}
+
+.img-caption {
+	text-align: center;
+}
+
+.caption-title {
+	font-size: 17px;
+	font-weight: 900;
+	margin: 10px;
+}
+
+.featured-movies-section {
+	padding: 20px;
+	/* add 20px of padding on the left and right sides of the featured movies section */
+	/* other styles for the featured movies section */
+}
+
+.movies-section {
+	/* styles for the movies section */
+	padding: 0 20px;
+	/* add 20px of padding on the left and right of the movies section */
+
+}
+
+.movies-columns {
+	display: flex;
+	/* display the movies and actors columns in a flex container */
+	/* other styles for the movies columns */
+}
+
+.movie-column {
+	display: flex;
+	/* display the movies in a flex container */
+	flex-wrap: wrap;
+	/* allow the movies to wrap to a new line if needed */
+	flex-grow: 1;
+	/* allow the movies column to grow and fill the available space */
+}
+
+.actors-column {
+	width: 250px;
+	/* set the width of the actors column to 250px */
+	/* other styles for the actors column */
+}
+
+.movie,
+.actor {
+	width: 160px;
+	/* set the width of the movie and actor elements to 160px */
+	height: 230px;
+	/* set the height of the movie and actor elements to 230px */
+
+	border: 1px solid #000;
+	/* add a black border to the movie and actor elements */
+	padding: 10px;
+	/* add 10px of padding to the movie and actor elements */
+	/* other styles for the movie and actor elements */
+}
+
+
+.actor {
+	display: flex;
+	/* display the actor elements in a flex container */
+	height: 50px;
+	/* set the height of the actor elements to 50px */
+	/* other styles for the actor elements */
+}
+
+.footer {
+	display: flex;
+	/* display the footer columns in a flex container */
+	flex-direction: column;
+	/* stack the columns vertically */
+	background-color: #333;
+	/* set the background color to dark gray */
+	color: #fff;
+	/* set the text color to white */
+	padding: 20px;
+	/* add 20px of padding to the footer */
+}
+
+.footer-columns {
+	display: flex;
+	/* display the footer columns in a flex container */
+	flex-direction: row;
+	/* arrange the columns horizontally */
+	/* other styles for the footer columns container */
+}
+
+.footer-column {
+	flex-grow: 1;
+	/* allow the footer columns to grow and fill the available space */
+	/* other styles for the footer columns */
+}
+
+.footer-bottom {
+	text-align: center;
+	/* center the footer bottom element */
+	/* other styles for the footer bottom element */
+}
+
+.footer-column-title {
+	font-size: 18px;
+	/* set the font size of the footer column titles to 18px */
+	margin: 0 0 10px 0;
+	/* add a 10px margin below the footer column titles */
+}
+
+.subscribe-form,
+.contact-form {
+	display: flex;
+	/* display the subscribe and contact forms in a flex container */
+	flex-wrap: wrap;
+	/* allow the form elements to wrap to a new line if needed */
+	/* other styles for the subscribe and contact forms */
+}
+
+.subscribe-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+	width: 100%;
+	/* set the width of the form elements to 100% */
+	margin-bottom: 10px;
+	/* add a 10px margin below the form elements */
+	/* other styles for the form elements */
+}
+
+
+.useful-links {
+	list-style: none;
+	/* remove the bullet points from the useful links list */
+	margin: 0;
+	/* remove the margin from the useful links list */
+	padding: 0;
+	/* remove the padding from the useful links list */
+	/* other styles for the useful links list */
+}
+
+
+.useful-links a {
+	color: #fff;
+	/* set the color of the links in the useful links list to white */
+	/* other styles for the links in the useful links list */
+}
+
+.copyright {
+	font-size: 14px;
+	/* set the font size of the copyright text to 14px */
+	/* other styles for the copyright text */
+}
+
+.burger-menu {
+	display: none;
+	color: #F37711;
+	font-size: 30px;
+	cursor: pointer;
+	min-width: 26px;
+}
+
+.show-menu {
+	display: flex !important;
+}
+
+@media (max-width: 1100px) {
+	.header-social {
+		display: none;
+	}
+}
+
+@media (max-width: 800px) {
+	.menu-links {
+		display: none;
+	}
+
+	.menu-links {
+		position: absolute;
+		top: 0;
+		background-color: #121212;
+		line-height: 30px;
+		margin-top: 80px;
+		z-index: 1;
+		/* padding: 20px; */
+		left: 0;
+		flex-direction: column;
+		width: 100%;
+		/* justify-content: center; */
+		align-items: center;
+	}
+
+	.menu-item {
+		padding: 4px;
+		text-align: center;
+	}
+
+	.burger-menu {
+		display: block;
+		float: right;
+		margin-right: 20px;
+	}
+
+	.menu-nav {
+		flex-grow: 0;
+	}
+}
+
+
+* {
+	box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+	height: 100%;
+	position: relative;
+	margin: auto;
+}
+
+/* Make the images invisible by default */
+.Containers {
+	display: none;
+	height: 100%;
+}
+
+.Containers img {
+	height: 100%;
+	object-fit: cover;
+}
+
+.slider-batman {
+	object-position: 55% 40%;
+}
+
+.slider-maverick {
+	object-position: 70% 55%;
+}
+
+.slider-interstellar {
+	object-position: 90% 55%;
+}
+
+/* forward & Back buttons */
+.Back,
+.forward {
+	cursor: pointer;
+	position: absolute;
+	top: 48%;
+	width: auto;
+	margin-top: -23px;
+	padding: 17px;
+	color: orange;
+	font-weight: bold;
+	font-size: 19px;
+	transition: 0.4s ease;
+	border-radius: 0 5px 5px 0;
+	user-select: none;
+}
+
+/* Place the "forward button" to the right */
+.forward {
+	right: 0;
+	border-radius: 4px 0 0 4px;
+}
+
+/*when the user hovers,add a black background with some little opacity */
+.Back:hover,
+.forward:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption Info */
+.Info {
+	color: #e3e3e3;
+	font-size: 16px;
+	padding: 10px 14px;
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+
+
+.MessageInfo {
+	height: 100%;
+	width: 500px;
+	color: #f2f2f3;
+	font-size: 14px;
+	padding: 370px 0px 0px 30px;
+	position: absolute;
+	top: 0;
+}
+
+.movie-title {
+	font-size: 45px;
+	font-weight: 900;
+}
+
+.message-bg {
+	background-color: #00000075;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.dots-container {
+	text-align: center;
+	top: 96%;
+	width: 100%;
+	position: absolute;
+}
+
+@media (max-width: 550px) {
+	.MessageInfo {
+		height: 100%;
+		width: auto;
+		color: #f2f2f3;
+		font-size: 14px;
+		padding: 350px 0px 0px 0px;
+		position: absolute;
+		top: 0;
+	}
+
+	.movie-title {
+		font-size: 28px;
+	}
+
+	.series h2::after {
+		content: '';
+		height: 1px;
+		width: 70%;
+		display: inline-grid;
+		margin-left: 0px;
+		position: relative;
+		bottom: 9px;
+		background: #c9c9c9;
+	}
+}
+
+
+.movie-info {
+	color: red;
+	font-size: 16px;
+	font-weight: 900;
+}
+
+.movie-description {
+	font-size: 16px;
+}
+
+.movie-read-more {
+	background: linear-gradient(89deg, #ff4162 0%, #ffa748 100%);
+	border: none;
+	font-size: 15px;
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+	font-weight: 600;
+	display: block;
+	margin: 10px 0px;
+}
+
+.yellow {
+	color: #ffa500;
+}
+
+.feature-read-more {
+	background: linear-gradient(89deg, #ff4162 0%, #ffa748 100%);
+	border: none;
+	font-size: 15px;
+	color: white;
+	padding: 8px;
+	border-radius: 10px;
+	font-weight: 600;
+	margin: 10px 0px;
+	width: 80%;
+}
+
+/* The circles or bullets and indicators */
+.dots {
+	cursor: pointer;
+	height: 16px;
+	width: 16px;
+	margin: 0 3px;
+	background-color: white;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.5s ease;
+}
+
+.enable,
+.dots:hover {
+	background-color: orange;
+}
+
+/* Faint animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.4s;
+	animation-name: fade;
+	animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: .5
+	}
+
+	to {
+		opacity: 2
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: .5
+	}
+
+	to {
+		opacity: 2
+	}
+}
+
+@media (max-width: 1000px) {
+
+	.featured-movies-container>.featured-movie:nth-child(6) {
+		display: none;
+	}
+}
+
+@media (max-width: 800px) {
+
+	.featured-movies-container>.featured-movie:nth-child(5) {
+		display: none;
+	}
+
+	.caption-title {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 600px) {
+
+	.featured-movies-container>.featured-movie:nth-child(4) {
+		display: none;
+	}
+}
+
+@media (max-width: 450px) {
+
+	.featured-movies-container>.featured-movie:nth-child(3) {
+		display: none;
+	}
+}

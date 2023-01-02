@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Movie Nachos</title>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="./script.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="logo-container">
+			<a href="./index.html">
+				<img class="logo" src="./images/logo_black_background.png">
+			</a>
+		</div>
+		<a id="burger-menu" class="burger-menu"><i class="fa fa-bars"></i></a>
+		<nav class="menu-nav">
+			<ul id="menu-links" class="menu-links">
+				<li class="menu-item"><a class="menu-link" href="#actors">Movies</a></li>
+				<li class="menu-item"><a class="menu-link" href="#actors">TV Series</a></li>
+				<li class="menu-item"><a class="menu-link" href="#actors">Reviews</a></li>
+				<li class="menu-item"><a class="menu-link" href="#actors">Actors</a></li>
+				<li class="menu-item"><a class="menu-link" href="#actors">News</a></li>
+				<li class="menu-item"><a class="menu-link" href="#actors">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="header-social">
+			<a class="social-link social-facebook">
+				<i class="fa fa-facebook"></i>
+			</a>
+			<a class="social-link">
+				<i class="fa fa-twitter"></i>
+			</a>
+			<a class="social-link">
+				<i class="fa fa-instagram"></i>
+			</a>
+		</div>
+	</header>
+	<main class="main">
+		<section class="slider-section">
+			<div class="slideshow-container fade">
+
+				<div class="Containers">
+					<div class="MessageInfo">
+						<div class="message-bg">
+							<span class="movie-title">The Dark Knight</span><br>
+							<span class="movie-info">2008 | Action, Crime | IMDB: 9.0</span><br>
+							<span class="movie-description">When the menace known as the Joker wreaks havoc and chaos on
+								the people of Gotham, Batman must accept one of the greatest psychological and physical
+								tests of his ability to fight injustice.</span><br>
+							<button class="movie-read-more">Read More</button>
+						</div>
+
+					</div>
+					<img class="slider-batman" src="./images/slider-batman.png" style="width:100%">
+				</div>
+
+				<div class="Containers">
+					<div class="MessageInfo">
+						<div class="message-bg">
+
+							<span class="movie-title">Top Gun: Maverick</span><br>
+							<span class="movie-info">2022 | Action, Drama | IMDB: 8.4</span><br>
+							<span class="movie-description">When the menace known as the Joker wreaks havoc and chaos on
+								the people of Gotham, Batman must accept one of the greatest psychological and physical
+								tests of his ability to fight injustice.</span><br>
+							<button class="movie-read-more">Read More</button>
+						</div>
+					</div>
+					<img class="slider-maverick" src="./images/slider-maverick.png" style="width:100%">
+				</div>
+
+				<div class="Containers">
+					<div class="MessageInfo">
+						<div class="message-bg">
+
+							<span class="movie-title">Interstellar</span><br>
+							<span class="movie-info">2014 | Adventure, Sci-Fi | IMDB: 8.6</span><br>
+							<span class="movie-description">When the menace known as the Joker wreaks havoc and chaos on
+								the people of Gotham, Batman must accept one of the greatest psychological and physical
+								tests of his ability to fight injustice.</span><br>
+							<button class="movie-read-more">Read More</button>
+						</div>
+					</div>
+					<img class="slider-interstellar" src="./images/slider-interstellar.png" style="width:100%">
+				</div>
+
+				<a class="Back" onclick="previousSlide()">&#10094;</a>
+				<a class="forward" onclick="nextSlide()">&#10095;</a>
+				<div class="dots-container">
+					<span class="dots" onclick="changeSlide(1)"></span>
+					<span class="dots" onclick="changeSlide(2)"></span>
+					<span class="dots" onclick="changeSlide(3)"></span>
+				</div>
+			</div>
+
+		</section>
+		<section class="featured-movies-section">
+			<div class="series">
+				<h2 class="featured-movies-title">
+					Featured Movies
+
+				</h2>
+			</div>
+
+			<div class="featured-movies-container">
+				<div class="featured-movie">
+					<img class="slider-maverick" src="./images/godzilla_poster.png" style="width:100%">
+					<div class="img-caption">
+						<span class="caption-title">Godzilla v Kong</span><br>
+						<span><i class="fa fa-star yellow"></i> 6.3 Rating</span><br>
+						<button class="feature-read-more">Read More</button>
+					</div>
+				</div>
+				<div class="featured-movie">
+					<img class="slider-maverick" src="./images/batman_poster.png" style="width:100%">
+					<div class="img-caption">
+
+						<span class="caption-title">Batman</span><br>
+						<span><i class="fa fa-star yellow"></i> 7.8 Rating</span><br>
+						<button class="feature-read-more">Read More</button>
+					</div>
+				</div>
+				<div class="featured-movie">
+					<img class="slider-maverick" src="./images/black_widow_poster.png" style="width:100%">
+					<div class="img-caption">
+
+						<span class="caption-title">Black Widow</span><br>
+						<span><i class="fa fa-star yellow"></i> 6.7 Rating</span><br>
+						<button class="feature-read-more">Read More</button>
+					</div>
+				</div>
+				<div class="featured-movie">
+					<img class="slider-maverick" src="./images/mortal_kombat_poster.png" style="width:100%">
+					<div class="img-caption">
+
+						<span class="caption-title">Mortal Kombat</span><br>
+						<span><i class="fa fa-star yellow"></i> 6.1 Rating</span><br>
+						<button class="feature-read-more">Read More</button>
+					</div>
+				</div>
+				<div class="featured-movie">
+					<img class="slider-maverick" src="./images/uncharted_poster.png" style="width:100%">
+					<div class="img-caption">
+
+						<span class="caption-title">Uncharted</span><br>
+						<span><i class="fa fa-star yellow"></i> 6.3 Rating</span><br>
+						<button class="feature-read-more">Read More</button>
+					</div>
+				</div>
+				<div class="featured-movie">
+					<img class="slider-maverick" src="./images/007_poster.png" style="width:100%">
+					<div class="img-caption">
+
+						<span class="caption-title">No Time To Die</span><br>
+						<span><i class="fa fa-star yellow"></i> 7.3 Rating</span><br>
+						<button class="feature-read-more">Read More</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- <section class="movies-section">
+			<h2 class="movies-title">Movies</h2>
+			<div class="movies-columns">
+				<div class="movie-column">
+					<div class="movie">
+
+						<div class="movie-title">Movie Title</div>
+					</div>
+					<div class="movie">
+
+						<div class="movie-title">Movie Title</div>
+					</div>
+					<div class="movie">
+
+						<div class="movie-title">Movie Title</div>
+					</div>
+					<div class="movie">
+
+						<div class="movie-title">Movie Title</div>
+					</div>
+					<div class="movie">
+
+						<div class="movie-title">Movie Title</div>
+					</div>
+				</div>
+				<div class="actors-column">
+					<div class="actor">
+						<img src="actor-image.jpg" alt="Actor Name" class="actor-image">
+						<div class="actor-name">Actor Name</div>
+					</div>
+					<div class="actor">
+						<img src="actor-image.jpg" alt="Actor Name" class="actor-image">
+						<div class="actor-name">Actor Name</div>
+					</div>
+					<div class="actor">
+						<img src="actor-image.jpg" alt="Actor Name" class="actor-image">
+						<div class="actor-name">Actor Name</div>
+					</div>
+					<div class="actor">
+						<img src="actor-image.jpg" alt="Actor Name" class="actor-image">
+						<div class="actor-name">Actor Name</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+
+
+
+
+	</main>
+
+
+
+	<!-- <footer class="footer">
+		<div class="footer-columns">
+
+			<div class="footer-column footer-column-left">
+				<h3 class="footer-column-title">Subscribe to our newsletter</h3>
+				<form class="subscribe-form">
+					<input type="email" placeholder="Enter your email address">
+					<button type="submit">Subscribe</button>
+				</form>
+			</div>
+			<div class="footer-column footer-column-middle">
+				<h3 class="footer-column-title">Useful Links</h3>
+				<ul class="useful-links">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Movies</a></li>
+					<li><a href="#">Actors</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div class="footer-column footer-column-right">
+				<h3 class="footer-column-title">Contact Form</h3>
+				<form class="contact-form">
+					<input type="text" placeholder="Name">
+					<input type="email" placeholder="Email">
+					<textarea placeholder="Message"></textarea>
+					<button type="submit">Send</button>
+				</form>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p class="copyright">Copyright &copy; 2022 MovieLABS</p>
+		</div>
+	</footer> -->
+
+
+</body>
+
+</html>
