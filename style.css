@@ -148,10 +148,9 @@ body {
 	/* other styles for the featured movies container */
 }
 
-.popular-movie {
+.popular-movie-caption {
 	background-color: #242323;
-	margin: 10px 2px;
-	max-width: 165px
+	margin-bottom: 10px;
 }
 
 .actor {
