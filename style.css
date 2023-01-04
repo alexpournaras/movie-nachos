@@ -42,7 +42,7 @@ body {
 	cursor: pointer;
 }
 
-.series h2::after {
+.section-header h2::after {
 	content: '';
 	height: 1px;
 	width: 50%;
@@ -79,7 +79,7 @@ body {
 	color: red;
 }
 
-.featured-movies-title {
+.section-header-title {
 	text-align: center;
 }
 
@@ -148,6 +148,23 @@ body {
 	/* other styles for the featured movies container */
 }
 
+.popular-movie {
+	background-color: #242323;
+	margin: 10px 2px;
+	max-width: 165px
+}
+
+.actor {
+	background-color: #242323;
+	margin: 0px 2px 4px 2px;
+	display: flex;
+	max-width: 280px;
+}
+
+.actor-image {
+	height: 80px;
+}
+
 .featured-movie {
 	/* other styles for the featured movie element */
 	background-color: #242323;
@@ -155,11 +172,37 @@ body {
 
 }
 
-.img-caption {
+.featured-movie-caption {
 	text-align: center;
 }
 
-.caption-title {
+.popular-movie-caption {
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.actor-caption {
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 5px;
+	min-width: 200px;
+	line-height: 30px;
+}
+
+.featured-movie-caption-title {
+	font-size: 17px;
+	font-weight: 900;
+	margin: 10px;
+}
+
+.popular-movie-caption-title {
+	font-size: 17px;
+	font-weight: 900;
+	margin: 10px;
+}
+
+.actor-caption-title {
 	font-size: 17px;
 	font-weight: 900;
 	margin: 10px;
@@ -171,7 +214,7 @@ body {
 	/* other styles for the featured movies section */
 }
 
-.movies-section {
+.latest-popular-section {
 	/* styles for the movies section */
 	padding: 0 20px;
 	/* add 20px of padding on the left and right of the movies section */
@@ -184,42 +227,26 @@ body {
 	/* other styles for the movies columns */
 }
 
-.movie-column {
+.popular-movies {
 	display: flex;
-	/* display the movies in a flex container */
 	flex-wrap: wrap;
-	/* allow the movies to wrap to a new line if needed */
-	flex-grow: 1;
-	/* allow the movies column to grow and fill the available space */
+	/* flex-grow: 1; */
+	/* justify-content: center; */
+	/* max-width: 1500px; */
+}
+
+.actors {
+	display: flex;
+	flex-wrap: wrap;
+	/* flex-grow: 1; */
+	justify-content: center;
+	/* margin-top: 27px; */
 }
 
 .actors-column {
 	width: 250px;
 	/* set the width of the actors column to 250px */
 	/* other styles for the actors column */
-}
-
-.movie,
-.actor {
-	width: 160px;
-	/* set the width of the movie and actor elements to 160px */
-	height: 230px;
-	/* set the height of the movie and actor elements to 230px */
-
-	border: 1px solid #000;
-	/* add a black border to the movie and actor elements */
-	padding: 10px;
-	/* add 10px of padding to the movie and actor elements */
-	/* other styles for the movie and actor elements */
-}
-
-
-.actor {
-	display: flex;
-	/* display the actor elements in a flex container */
-	height: 50px;
-	/* set the height of the actor elements to 50px */
-	/* other styles for the actor elements */
 }
 
 .footer {
@@ -395,6 +422,10 @@ body {
 	object-position: 90% 55%;
 }
 
+.featured-movie-image {
+	width: 100%;
+}
+
 /* forward & Back buttons */
 .Back,
 .forward {
@@ -480,7 +511,7 @@ body {
 		font-size: 28px;
 	}
 
-	.series h2::after {
+	.section-header h2::after {
 		content: '';
 		height: 1px;
 		width: 70%;
@@ -515,8 +546,29 @@ body {
 	margin: 10px 0px;
 }
 
-.yellow {
+.featured-movie-caption-star {
 	color: #ffa500;
+}
+
+.featured-movie-caption-button {
+	background: linear-gradient(89deg, #ff4162 0%, #ffa748 100%);
+	border: none;
+	font-size: 15px;
+	color: white;
+	padding: 8px;
+	border-radius: 10px;
+	font-weight: 600;
+	margin: 10px 0px;
+	width: 80%;
+}
+
+.popular-movie-image {
+	width: 100%;
+	display: block;
+}
+
+.latest-popular-actors-section {
+	max-width: 300px;
 }
 
 .feature-read-more {
@@ -529,6 +581,10 @@ body {
 	font-weight: 600;
 	margin: 10px 0px;
 	width: 80%;
+}
+
+.latest-popular-two-columns {
+	display: flex;
 }
 
 /* The circles or bullets and indicators */
@@ -589,6 +645,14 @@ body {
 		display: none;
 	}
 
+	.featured-movie-caption-title {
+		font-size: 14px;
+	}
+
+	.popular-movie-caption-title {
+		font-size: 14px;
+	}
+
 	.caption-title {
 		font-size: 14px;
 	}
@@ -607,3 +671,114 @@ body {
 		display: none;
 	}
 }
+
+
+@media (max-width: 1100px) {
+
+	.latest-popular-two-columns {
+		display: block !important;
+	}
+
+	.latest-popular-actors-section {
+		max-width: unset;
+	}
+
+	.actor:nth-last-of-type(-n+2) {
+
+		display: flex !important;
+	}
+}
+
+@media (max-width: 1500px) {
+
+	.actor:nth-last-of-type(-n+2) {
+
+		display: none;
+	}
+}
+
+@media (max-width: 1300px) {
+
+	.popular-movie-caption-title {
+		font-size: 15px;
+	}
+}
+
+@media (min-width: 992px) {
+	.col-lg-6 {
+	  width: 50%; /* Take up 50% of the row width */
+	  padding: 0px 2px;
+	}
+  }
+  
+  /* The col-sm-4 class creates a column that takes up 4 columns on small devices */
+  @media (max-width: 991px) {
+	.col-sm-4 {
+	  width: 33.33333333%; /* Take up 33.33333333% of the row width */
+	  padding: 0px 2px;
+	}
+  }
+
+
+  @media (min-width: 992px) {
+	.col-lg-2 {
+	  width: 16.666666666666666666666666666667%; /* Take up 16.666666666666666666666666666667% of the row width */
+	  padding: 0px 2px;
+	}
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+	.col-md-2 {
+	  width: 16.666666666666666666666666666667%; /* Take up 16.666666666666666666666666666667% of the row width */
+	  padding: 0px 2px;
+	}
+  }
+  
+  @media (max-width: 767px) {
+	.col-sm-4 {
+	  width: 33.33333333%; /* Take up 33.33333333% of the row width */
+	  padding: 0px 2px;
+	}
+  }
+  
+  @media (max-width: 575px) {
+	.col-xs-6 {
+	  width: 50%; /* Take up 50% of the row width */
+	  padding: 0px 2px;
+	}
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+	.col-md-3 {
+	  width: 25%; /* Take up 25% of the row width */
+	  padding: 0px 2px;
+	}
+  }
+  
+
+  @media (min-width: 768px) and (max-width: 991px) {
+	.col-md-4 {
+	  width: 33.33333333%; /* Take up 33.33333333% of the row width */
+	  padding: 0px 2px;
+	}
+  }
+  
+  @media (max-width: 767px) {
+	.col-sm-6 {
+	  width: 50%; /* Take up 50% of the row width */
+	  padding: 0px 2px;
+	}
+  }
+  
+  @media (max-width: 575px) {
+	.col-xs-12 {
+	  width: 100%; /* Take up 100% of the row width */
+	  padding: 0px 2px;
+	}
+  }
+  
+  
+
+
+
+
