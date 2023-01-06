@@ -267,24 +267,12 @@ body {
 	flex-wrap: wrap;
 }
 
-.footer-column {
-	flex-grow: 1;
-	/* allow the footer columns to grow and fill the available space */
-	/* other styles for the footer columns */
-}
-
 .footer-bottom {
 	text-align: center;
 	/* center the footer bottom element */
 	/* other styles for the footer bottom element */
 }
 
-.footer-column-title {
-	font-size: 18px;
-	/* set the font size of the footer column titles to 18px */
-	margin: 0 0 10px 0;
-	/* add a 10px margin below the footer column titles */
-}
 
 .subscribe-form,
 .contact-form {
@@ -309,19 +297,25 @@ body {
 
 .useful-links {
 	list-style: none;
-	/* remove the bullet points from the useful links list */
 	margin: 0;
-	/* remove the margin from the useful links list */
 	padding: 0;
-	/* remove the padding from the useful links list */
-	/* other styles for the useful links list */
 }
 
 
 .useful-links a {
 	color: #fff;
-	/* set the color of the links in the useful links list to white */
-	/* other styles for the links in the useful links list */
+}
+
+.footer-useful-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.footer-useful-links a {
+	text-decoration: none;
+    color: gray;
 }
 
 .copyright {
@@ -719,6 +713,11 @@ body {
 }
 @media (min-width: 768px) and (max-width: 991px) {
 
+	.col-md-12 {
+		width: 100%; /* Take up 33.33333333% of the row width */
+		padding: 0px 2px;
+	  }
+
 	.col-md-6 {
 		width: 50%; /* Take up 33.33333333% of the row width */
 		padding: 0px 2px;
@@ -806,7 +805,7 @@ body {
   }
   
   .btn {
-	background-color: #f37711;
+	background: linear-gradient(89deg, #ff4162 0%, #ffa748 100%);
     border: 0;
     color: #fff;
     border-bottom-right-radius: 10px;
