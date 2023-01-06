@@ -264,10 +264,7 @@ body {
 
 .footer-columns {
 	display: flex;
-	/* display the footer columns in a flex container */
-	flex-direction: row;
-	/* arrange the columns horizontally */
-	/* other styles for the footer columns container */
+	flex-wrap: wrap;
 }
 
 .footer-column {
@@ -709,32 +706,54 @@ body {
 	  width: 50%; /* Take up 50% of the row width */
 	  padding: 0px 2px;
 	}
-  }
-  
-  /* The col-sm-4 class creates a column that takes up 4 columns on small devices */
-  @media (max-width: 991px) {
-	.col-sm-4 {
-	  width: 33.33333333%; /* Take up 33.33333333% of the row width */
+
+	.col-lg-4 {
+	  width: 33.3333333%; /* Take up 16.666666666666666666666666666667% of the row width */
 	  padding: 0px 2px;
 	}
-  }
-
-
-  @media (min-width: 992px) {
 	.col-lg-2 {
-	  width: 16.666666666666666666666666666667%; /* Take up 16.666666666666666666666666666667% of the row width */
-	  padding: 0px 2px;
-	}
-  }
+		width: 16.666666666666666666666666666667%; /* Take up 16.666666666666666666666666666667% of the row width */
+		padding: 0px 2px;
+	  }
 
-  @media (min-width: 768px) and (max-width: 991px) {
-	.col-md-2 {
-	  width: 16.666666666666666666666666666667%; /* Take up 16.666666666666666666666666666667% of the row width */
-	  padding: 0px 2px;
-	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.col-md-6 {
+		width: 50%; /* Take up 33.33333333% of the row width */
+		padding: 0px 2px;
+	  }
+	.col-md-4 {
+		width: 33.33333333%; /* Take up 33.33333333% of the row width */
+		padding: 0px 2px;
+	  }
+
+	.col-md-3 {
+		width: 25%; /* Take up 25% of the row width */
+		padding: 0px 2px;
+	  }
+
+  .col-md-2 {
+	width: 16.666666666666666666666666666667%; /* Take up 16.666666666666666666666666666667% of the row width */
+	padding: 0px 2px;
   }
+}
+
+
+
   
   @media (max-width: 767px) {
+	.col-sm-12 {
+		width: 100%; /* Take up 50% of the row width */
+		padding: 0px 2px;
+	  }
+
+	.col-sm-6 {
+		width: 50%; /* Take up 50% of the row width */
+		padding: 0px 2px;
+	  }
+	  
+
 	.col-sm-4 {
 	  width: 33.33333333%; /* Take up 33.33333333% of the row width */
 	  padding: 0px 2px;
@@ -747,28 +766,6 @@ body {
 	  padding: 0px 2px;
 	}
   }
-
-  @media (min-width: 768px) and (max-width: 991px) {
-	.col-md-3 {
-	  width: 25%; /* Take up 25% of the row width */
-	  padding: 0px 2px;
-	}
-  }
-  
-
-  @media (min-width: 768px) and (max-width: 991px) {
-	.col-md-4 {
-	  width: 33.33333333%; /* Take up 33.33333333% of the row width */
-	  padding: 0px 2px;
-	}
-  }
-  
-  @media (max-width: 767px) {
-	.col-sm-6 {
-	  width: 50%; /* Take up 50% of the row width */
-	  padding: 0px 2px;
-	}
-  }
   
   @media (max-width: 575px) {
 	.col-xs-12 {
@@ -777,6 +774,53 @@ body {
 	}
   }
   
+
+  .box {
+	background-color: #242323;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+	height: 100%;
+  }
+  
+  .box h2 {
+	margin: 0px;
+  }
+  
+  .box p {
+	color: white;
+	margin: 25px 10px 10px 10px;
+  }
+
+  .form-control {
+	position: relative;
+	margin: 30px 0 20px;
+  }
+
+  .input {
+	border: 0;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 12px 25px;
+    width: 100%;
+  }
+  
+  .btn {
+	background-color: #f37711;
+    border: 0;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 14px;
+    padding: 12px 25px;
+    position: absolute;
+    top: 0;
+    right: -1px;
+  }
+
+  .footer-column {
+	padding: 5px 10px;
+  }
   
 
 
