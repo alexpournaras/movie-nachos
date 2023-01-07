@@ -42,6 +42,10 @@ body {
 	cursor: pointer;
 }
 
+.social-link:hover {
+	color: #F37711;
+}
+
 .section-header h2::after {
 	content: '';
 	height: 1px;
