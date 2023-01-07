@@ -146,10 +146,8 @@ body {
 
 .featured-movies-container {
 	display: flex;
-	/* display the featured movie elements in a flex container */
 	justify-content: center;
-	/* flex-wrap: wrap;  */
-	/* other styles for the featured movies container */
+	flex-wrap: wrap;
 }
 
 .popular-movie-caption {
@@ -170,15 +168,11 @@ body {
 	width: 81px;
 }
 
-.featured-movie {
-	/* other styles for the featured movie element */
-	background-color: #242323;
-	margin: 2px;
-
-}
 
 .featured-movie-caption {
 	text-align: center;
+	background-color: #242323;
+    margin-bottom: 10px;
 }
 
 .popular-movie-caption {
@@ -682,18 +676,9 @@ body {
 	}
 }
 
-@media (max-width: 1000px) {
 
-	.featured-movies-container>.featured-movie:nth-child(6) {
-		display: none;
-	}
-}
 
 @media (max-width: 800px) {
-
-	.featured-movies-container>.featured-movie:nth-child(5) {
-		display: none;
-	}
 
 	.featured-movie-caption-title {
 		font-size: 14px;
@@ -705,20 +690,6 @@ body {
 
 	.caption-title {
 		font-size: 14px;
-	}
-}
-
-@media (max-width: 600px) {
-
-	.featured-movies-container>.featured-movie:nth-child(4) {
-		display: none;
-	}
-}
-
-@media (max-width: 450px) {
-
-	.featured-movies-container>.featured-movie:nth-child(3) {
-		display: none;
 	}
 }
 
