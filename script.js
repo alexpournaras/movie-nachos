@@ -12,9 +12,24 @@ window.onload = function () {
 
 	});
 
+	
+	
 	setSlide(1);
 };
 
+function setRightColumnHeight() {
+	// Get the left and right columns
+	var leftColumn = document.querySelector('.popular-movies');
+
+	var rightColumn = document.querySelector('.actors');
+	// Set the max-height of the right column to the height of the left column
+	rightColumn.style.maxHeight = (leftColumn.offsetHeight - 10) + "px";
+  }
+	// Call the function when the page loads
+	window.addEventListener("load", setRightColumnHeight);
+	
+	// Call the function again when the window is resized
+	window.addEventListener("resize", setRightColumnHeight);
 var active_slide = null;
 var auto_scroll = true;
 

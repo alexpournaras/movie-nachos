@@ -158,11 +158,12 @@ body {
 	margin: 0px 2px 4px 2px;
 	display: flex;
 	max-width: 280px;
+	transition: transform .2s; 
 }
 
 .actor-image {
-	height: 80px;
-	width: 80px;
+	height: 81px;
+	width: 81px;
 }
 
 .featured-movie {
@@ -199,7 +200,6 @@ body {
 .popular-movie-caption-title {
 	font-size: 17px;
 	font-weight: 900;
-	margin: 10px;
 }
 
 .actor-caption-title {
@@ -241,6 +241,8 @@ body {
 	/* flex-grow: 1; */
 	justify-content: center;
 	/* margin-top: 27px; */
+	/* overflow: scroll; */
+	overflow-y: scroll;
 }
 
 .actors-column {
@@ -306,22 +308,72 @@ body {
 	color: #fff;
 }
 
-.footer-useful-links {
+.footer-usefull-links {
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 15px;
 }
 
 
-.footer-useful-links a {
+.footer-usefull-links a {
 	text-decoration: none;
     color: gray;
+	font-size: 25px;
+	padding: 10px 20px 20px 20px;
+}
+
+.footer-contact-us-container {
+	margin: 10px 0 0 0;
+}
+
+.footer-contact-us-textarea {
+	padding: 10px;
+	border-radius: 10px;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+.footer-contact-us-button {
+	background: linear-gradient(89deg, #ff4162 0%, #ffa748 100%);
+	border: 0;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 14px;
+	margin-top: 5px;
+	padding: 8px 25px;
+	cursor: pointer;
 }
 
 .copyright {
 	font-size: 14px;
 	/* set the font size of the copyright text to 14px */
 	/* other styles for the copyright text */
+}
+
+.copyright-title {
+	text-decoration: none;
+	color: white;
+}
+
+.copyright-author {
+	text-decoration: none;
+	color: white;
+}
+
+.copyright-title:hover {
+	color: #F37711;
+}
+
+.copyright-author:hover {
+	color: #F37711;
+}
+
+.footer-usefull-links li a:hover {
+	color: #F37711;
+}
+
+.footer-social-links a:hover {
+	color: #F37711;
 }
 
 .burger-menu {
@@ -577,6 +629,9 @@ body {
 .latest-popular-two-columns {
 	display: flex;
 }
+.actor:last-child {
+	margin: 0;
+  }
 
 /* The circles or bullets and indicators */
 .dots {
@@ -674,17 +729,12 @@ body {
 		max-width: unset;
 	}
 
-	.actor:nth-last-of-type(-n+2) {
-
-		display: flex !important;
+	.actors {
+		overflow: unset;
 	}
-}
 
-@media (max-width: 1500px) {
-
-	.actor:nth-last-of-type(-n+2) {
-
-		display: none;
+	.actor:last-child {
+		margin: 0px 2px 4px 2px;
 	}
 }
 
@@ -796,6 +846,8 @@ body {
 	margin: 30px 0 20px;
   }
 
+  
+
   .input {
 	border: 0;
     border-radius: 10px;
@@ -815,13 +867,86 @@ body {
     position: absolute;
     top: 0;
     right: -1px;
+	cursor: pointer;
   }
 
   .footer-column {
 	padding: 5px 10px;
   }
+
+  @media (max-width: 400px) {
+	.btn {
+		font-size: 10px;
+    	padding: 10px 10px;
+	}
+
+	.input {
+		font-size: 10px;
+    	padding: 10px 10px;
+	}
+  }
+
+  .actor:hover {
+	/* color: #F37711; */
+	transform: scale(1.02);
+	cursor: pointer;
+  }
+
+  .actor:hover > .actor-caption > .actor-caption-title {
+	color: #F37711;
+	/* cursor: pointer; */
+  }
+
+  .popular-movie {
+	/* Initial state of the image */
+	transition: transform .2s; /* Add a transition effect when the hover state is triggered */
+	/* width: 200px; */
+  }
+  
+  .popular-movie:hover {
+	/* Style the image when it is hovered */
+	transform: scale(1.02); /* Increase the size of the image */
+	cursor: pointer;
+  }
+
+  .popular-movie:hover > .popular-movie-caption > .popular-movie-caption-title {
+	color: #F37711;
+	/* cursor: pointer; */
+  }
+
+
+
+
+
+
+
+
+
   
 
+  /* width */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+  
+  /* Internet Explorer */
+  scrollbar-color: #888 #f1f1f1;
+  scrollbar-width: thin;
 
 
 
