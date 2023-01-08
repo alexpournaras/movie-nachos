@@ -157,15 +157,15 @@ body {
 
 .actor {
 	background-color: #242323;
-	margin: 0px 2px 4px 2px;
+	margin: 0px 2px 4px 4px;
 	display: flex;
-	max-width: 280px;
 	transition: transform .2s; 
 }
 
 .actor-image {
 	height: 81px;
 	width: 81px;
+	margin-left: -2px;
 }
 
 
@@ -187,6 +187,7 @@ body {
 	padding-top: 5px;
 	min-width: 200px;
 	line-height: 30px;
+	width: 100%;
 }
 
 .featured-movie-caption-title {
@@ -438,6 +439,7 @@ body {
 	height: 100%;
 	position: relative;
 	margin: auto;
+	background-color: #121212;
 }
 
 /* Make the images invisible by default */
@@ -628,10 +630,6 @@ body {
 .latest-popular-two-columns {
 	display: flex;
 }
-.actor:last-child {
-	margin: 0;
-  }
-
 /* The circles or bullets and indicators */
 .dots {
 	cursor: pointer;
@@ -709,9 +707,14 @@ body {
 		overflow: unset;
 	}
 
-	.actor:last-child {
-		margin: 0px 2px 4px 2px;
+	.actor {
+		width: 30%
 	}
+
+	.actor-caption {
+		min-width: unset;
+	}
+
 }
 
 @media (max-width: 1300px) {
