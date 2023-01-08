@@ -30,8 +30,10 @@ function setRightColumnHeight() {
 	
 	// Call the function again when the window is resized
 	window.addEventListener("resize", setRightColumnHeight);
+
+
 var active_slide = null;
-var auto_scroll = true;
+var auto_scroll = false;
 
 var intervalId = setInterval(() => {
 	if (auto_scroll) nextSlide();
