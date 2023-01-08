@@ -80,3 +80,36 @@ function setSlide(slide) {
 	slides[slide - 1].style.display = "block";
 	circles[slide - 1].className += " enable";
 }
+
+let xDown = null;
+let yDown = null;
+
+document.addEventListener('touchstart', (event) => {
+  xDown = event.touches[0].clientX;
+  yDown = event.touches[0].clientY;
+});
+
+document.addEventListener('touchmove', (event) => {
+  if (!xDown || !yDown) {
+    return;
+  }
+
+  const xUp = event.touches[0].clientX;
+  const yUp = event.touches[0].clientY;
+  const xDiff = xDown - xUp;
+  const yDiff = yDown - yUp;
+
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    if (xDiff > 0) {
+      // Swipe left
+      nextSlide();
+    } else {
+      // Swipe right
+      previousSlide();
+    }
+  }
+
+  xDown = null;
+  yDown = null;
+});
+
