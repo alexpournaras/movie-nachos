@@ -585,6 +585,7 @@ body {
 	font-weight: 600;
 	display: block;
 	margin: 10px 0px;
+	cursor: pointer;
 }
 
 .featured-movie-caption-star {
@@ -859,6 +860,10 @@ body {
 		font-size: 10px;
     	padding: 10px 10px;
 	}
+
+	.footer-contact-us-textarea {
+		font-size: 10px;
+	}
   }
 
   .actor:hover {
@@ -887,6 +892,27 @@ body {
   .popular-movie:hover > .popular-movie-caption > .popular-movie-caption-title {
 	color: #F37711;
 	/* cursor: pointer; */
+  }
+
+  .featured-movie {
+	/* Initial state of the image */
+	transition: transform .2s; /* Add a transition effect when the hover state is triggered */
+	/* width: 200px; */
+  }
+  
+  .featured-movie:hover {
+	/* Style the image when it is hovered */
+	transform: scale(1.02); /* Increase the size of the image */
+	cursor: pointer;
+  }
+
+  .featured-movie:hover > .featured-movie-caption > .featured-movie-caption-title {
+	color: #F37711;
+	/* cursor: pointer; */
+  }
+
+  .featured-movie:hover > .featured-movie-caption > .featured-movie-caption-button {
+	cursor: pointer;
   }
 
 
