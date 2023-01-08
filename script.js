@@ -33,7 +33,7 @@ function setRightColumnHeight() {
 
 
 var active_slide = null;
-var auto_scroll = false;
+var auto_scroll = true;
 
 var intervalId = setInterval(() => {
 	if (auto_scroll) nextSlide();
