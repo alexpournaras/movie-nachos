@@ -348,6 +348,15 @@
 				</div>
 			</div>
 		</section>
+		<div id="cookieNotification" class="cookie-notification">
+			<div class="cookie-container">
+				<p class="cookie-description">We use cookies to offer to you the best possible user experience. By using our services, you accept the use of cookies.</p>
+				<div class="cookie-buttons-container">
+					<button type="button" id="closeCookie" class="cookie-button-close">Close</button>
+					<button type="button" id="acceptCookie" class="cookie-button-ok">OK</button>
+				</div>
+			</div>
+		</div>
 	</main>
 
 	<footer class="footer">
@@ -359,8 +368,9 @@
 					<p>Our weekly newsletter provides you with the latest and most important happenings in the industry.</p>
 					<div class="form-control">
 					  <input type="text" class="input" placeholder="Enter e-mail adress" />
-					  <button class="btn">Subscribe</button>
+					  <button id="subscribe" class="btn">Subscribe</button>
 					</div>
+					<p id="successully-subscribed" style="margin: 0;color: green; display: none;">You have successully subscribed!</p>
 				  </div>
 			</div>
 			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 footer-column">
@@ -393,8 +403,9 @@
 					</div>
 					<div class="footer-contact-us-container">
 						<textarea class="footer-contact-us-textarea" placeholder="Type your message" rows="3"></textarea>
-					  <button class="footer-contact-us-button">Send</button>
+					  <button id="message-send" class="footer-contact-us-button">Send</button>
 					</div>
+					<p id="message-sent" style="margin: 10px; color: green; display: none;">We received your message!</p>
 				  </div>
 			</div>
 		</div>

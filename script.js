@@ -1,4 +1,20 @@
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function() {
+	const cookie_close = document.getElementById('closeCookie');
+	const cookie_accept = document.getElementById('acceptCookie');
+	const cookie_notification = document.getElementById('cookieNotification');
+
+    if (localStorage.getItem('cookie_accepted') != 'true') {
+        cookie_notification.style.display = "block";
+    }
+
+	cookie_close.addEventListener('click', function () {
+		cookie_notification.style.display = "none"
+	});
+
+	cookie_accept.addEventListener('click', function () {
+		localStorage.setItem('cookie_accepted', 'true');
+		cookie_notification.style.display = "none"
+	});
 
 	const burger_menu = document.getElementById('burger-menu');
 	const menu_links = document.getElementById('menu-links');
@@ -8,14 +24,23 @@ window.onload = function () {
 		menu_links.classList.toggle("show-menu");
 		icon.classList.toggle('fa-times');
 		icon.classList.toggle('fa-bars');
-
-
 	});
 
-	
-	
+	const subscribe = document.getElementById('subscribe');
+	const successully_subscribed = document.getElementById('successully-subscribed');
+	const message_send = document.getElementById('message-send');
+	const message_sent = document.getElementById('message-sent');
+
+	subscribe.addEventListener('click', function () {
+		successully_subscribed.style.display = "block";
+	});
+
+	message_send.addEventListener('click', function () {
+		message_sent.style.display = "block";
+	});
+
 	setSlide(1);
-};
+});
 
 function setRightColumnHeight() {
 	// Get the left and right columns
