@@ -139,6 +139,10 @@ body {
 	border-radius: 10px;
 }
 
+.slideshow-item-description-container a {
+	text-decoration: none;
+}
+
 .movie-title {
 	font-size: 45px;
 	font-weight: 900;
@@ -254,6 +258,8 @@ body {
 
 .featured-movie {
 	transition: transform .2s;
+	text-decoration: none;
+	color: inherit;
 }
 
 .featured-movie-caption {
@@ -317,6 +323,8 @@ body {
 
 .popular-movie {
 	transition: transform .2s;
+	text-decoration: none;
+	color: inherit;
 }
 
 .popular-movie-caption {
@@ -362,6 +370,8 @@ body {
 	margin: 0px 2px 4px 4px;
 	display: flex;
 	transition: transform .2s;
+	text-decoration: none;
+	color: inherit;
 }
 
 .actor-caption {
