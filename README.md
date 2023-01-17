@@ -3,5 +3,5 @@
 https://alexpournaras.github.io/movie-nachos/
 
 TODO:
-- Create subpages
+- Make buttons of main page to go to subpages
 - Add correct texts

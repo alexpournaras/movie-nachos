@@ -134,7 +134,7 @@ body {
 }
 
 .slideshow-item-description-container {
-	background-color: var(--background-color);
+	background-color: #00000075;
 	padding: 10px;
 	border-radius: 10px;
 }
