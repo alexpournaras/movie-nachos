@@ -1,142 +1,148 @@
 document.addEventListener('DOMContentLoaded', function() {
-	const cookie_close = document.getElementById('closeCookie');
-	const cookie_accept = document.getElementById('acceptCookie');
-	const cookie_notification = document.getElementById('cookieNotification');
 
-    if (localStorage.getItem('cookie_accepted') != 'true') {
-        cookie_notification.style.display = "block";
-    }
+	// Cookie functionality with localstorage
+	const closeCookieBtn = document.getElementById('closeCookie');
+	const acceptCookieBtn = document.getElementById('acceptCookie');
+	const cookieNotification = document.getElementById('cookieNotification');
 
-	cookie_close.addEventListener('click', function () {
-		cookie_notification.style.display = "none"
+	if (localStorage.getItem('cookie_accepted') != 'true') {
+		cookieNotification.style.display = "block";
+	}
+
+	closeCookieBtn.addEventListener('click', function () {
+		cookieNotification.style.display = "none"
 	});
 
-	cookie_accept.addEventListener('click', function () {
+	acceptCookieBtn.addEventListener('click', function () {
 		localStorage.setItem('cookie_accepted', 'true');
-		cookie_notification.style.display = "none"
+		cookieNotification.style.display = "none"
 	});
 
-	const burger_menu = document.getElementById('burger-menu');
-	const menu_links = document.getElementById('menu-links');
-	const icon = burger_menu.querySelector('i');
+	// Menu responsive functionality
+	const burgerMenu = document.getElementById('burger-menu');
+	const menuLinks = document.getElementById('menu-links');
+	const burgerIcon = burgerMenu.querySelector('i');
 
-	burger_menu.addEventListener('click', function () {
-		menu_links.classList.toggle("show-menu");
-		icon.classList.toggle('fa-times');
-		icon.classList.toggle('fa-bars');
+	burgerMenu.addEventListener('click', function () {
+		menuLinks.classList.toggle("show-menu");
+		burgerIcon.classList.toggle('fa-times');
+		burgerIcon.classList.toggle('fa-bars');
 	});
 
-	const subscribe = document.getElementById('subscribe');
-	const successully_subscribed = document.getElementById('successully-subscribed');
-	const message_send = document.getElementById('message-send');
-	const message_sent = document.getElementById('message-sent');
+	// Subscribe action on click
+	const subscribeBtn = document.getElementById('subscribe');
+	const subscribeConfirmation = document.getElementById('successully-subscribed');
 
-	subscribe.addEventListener('click', function () {
-		successully_subscribed.style.display = "block";
+	subscribeBtn.addEventListener('click', function () {
+		subscribeConfirmation.style.display = "block";
 	});
 
-	message_send.addEventListener('click', function () {
-		message_sent.style.display = "block";
+	// Message sent action on click
+	const messageSendBtn = document.getElementById('message-send');
+	const messageSentConfirmation = document.getElementById('message-sent');
+
+	messageSendBtn.addEventListener('click', function () {
+		messageSentConfirmation.style.display = "block";
 	});
 
+	// Set initial slider when page loads
 	setSlide(1);
 });
 
-function setRightColumnHeight() {
-	// Get the left and right columns
-	var leftColumn = document.querySelector('.popular-movies');
+// Call the function when the page loads
+window.addEventListener("load", setRightColumnHeight);
 
-	var rightColumn = document.querySelector('.actors');
-	// Set the max-height of the right column to the height of the left column
-	rightColumn.style.maxHeight = (leftColumn.offsetHeight - 10) + "px";
-  }
-	// Call the function when the page loads
-	window.addEventListener("load", setRightColumnHeight);
-	
-	// Call the function again when the window is resized
-	window.addEventListener("resize", setRightColumnHeight);
+// Call the function when the window is resized
+window.addEventListener("resize", setRightColumnHeight);
 
-
-var active_slide = null;
-var auto_scroll = true;
+const automaticScroll = true;
+const scrollInterval = 5000;
+let activeSlide = null;
 
 var intervalId = setInterval(() => {
-	if (auto_scroll) nextSlide();
-}, 5000);
+	if (automaticScroll) nextSlide();
+}, scrollInterval);
+
+function setRightColumnHeight() {
+	const leftColumn = document.querySelector('.popular-movies');
+	const rightColumn = document.querySelector('.actors');
+
+	rightColumn.style.maxHeight = (leftColumn.offsetHeight - 10) + "px";
+}
 
 function nextSlide() {
-	active_slide += 1;
-	if (active_slide > 3) active_slide = 1;
-	setSlide(active_slide);
+	activeSlide += 1;
+	if (activeSlide > 3) activeSlide = 1;
+	setSlide(activeSlide);
 }
 
 function previousSlide() {
-	active_slide -= 1;
-	if (active_slide < 1) active_slide = 3;
-	setSlide(active_slide);
+	activeSlide -= 1;
+	if (activeSlide < 1) activeSlide = 3;
+	setSlide(activeSlide);
 }
 
 function changeSlide(slide) {
-	active_slide = slide;
+	activeSlide = slide;
 	setSlide(slide);
 }
 
 function setSlide(slide) {
-	if (!active_slide) active_slide = slide;
+	if (!activeSlide) activeSlide = slide;
 
+	// Reset the interval after manual change of slide
 	clearInterval(intervalId);
-
 	intervalId = setInterval(() => {
-		if (auto_scroll) nextSlide();
-	}, 5000);
+		if (automaticScroll) nextSlide();
+	}, scrollInterval);
 
-	var i;
-	var slides = document.getElementsByClassName("Containers");
-	var circles = document.getElementsByClassName("dots");
+	// Set the correct slide
+	var slides = document.getElementsByClassName('slideshow-item');
+	var dots = document.getElementsByClassName('slideshow-dot');
 	if (slide > slides.length) { slide = 1 }
 	if (slide < 1) { slide = slides.length }
 
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";
+	// Hide and show the correct slide and dot
+	for (let i = 0; i < slides.length; i++) {
+		slides[i].style.display = 'none';
 	}
 
-	for (i = 0; i < circles.length; i++) {
-		circles[i].className = circles[i].className.replace(" enable", "");
+	for (let i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(' slideshow-enabled', '');
 	}
 
-	slides[slide - 1].style.display = "block";
-	circles[slide - 1].className += " enable";
+	slides[slide - 1].style.display = 'block';
+	dots[slide - 1].className += ' slideshow-enabled';
 }
 
-let xDown = null;
-let yDown = null;
+// Initialize touch-points
+let initialTouchX = null;
+let initialTouchY = null;
 
 document.addEventListener('touchstart', (event) => {
-  xDown = event.touches[0].clientX;
-  yDown = event.touches[0].clientY;
+	initialTouchX = event.touches[0].clientX;
+	initialTouchY = event.touches[0].clientY;
 });
 
+// Handle touch-swipe actions to move to the next or previous slide
 document.addEventListener('touchmove', (event) => {
-  if (!xDown || !yDown) {
-    return;
-  }
+	if (!initialTouchX || !initialTouchY) return;
 
-  const xUp = event.touches[0].clientX;
-  const yUp = event.touches[0].clientY;
-  const xDiff = xDown - xUp;
-  const yDiff = yDown - yUp;
+	const xUp = event.touches[0].clientX;
+	const yUp = event.touches[0].clientY;
+	const xDiff = initialTouchX - xUp;
+	const yDiff = initialTouchY - yUp;
 
-  if (Math.abs(xDiff) > Math.abs(yDiff)) {
-    if (xDiff > 0) {
-      // Swipe left
-      nextSlide();
-    } else {
-      // Swipe right
-      previousSlide();
-    }
-  }
+	if (Math.abs(xDiff) > Math.abs(yDiff)) {
+		if (xDiff > 0) {
+			// Swipe left
+			nextSlide();
+		} else {
+			// Swipe right
+			previousSlide();
+		}
+	}
 
-  xDown = null;
-  yDown = null;
+	initialTouchX = null;
+	initialTouchY = null;
 });
-

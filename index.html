@@ -3,11 +3,10 @@
 
 <head>
 	<title>Movie Nachos</title>
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="style.css">
-	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
 	<script src="./script.js"></script>
 </head>
 
@@ -29,7 +28,7 @@
 			</ul>
 		</nav>
 		<div class="header-social">
-			<a class="social-link social-facebook">
+			<a class="social-link">
 				<i class="fa fa-facebook"></i>
 			</a>
 			<a class="social-link">
@@ -40,13 +39,14 @@
 			</a>
 		</div>
 	</header>
+
 	<main class="main">
 		<section class="slider-section">
 			<div class="slideshow-container fade">
 
-				<div class="Containers" style="display: block;">
-					<div class="MessageInfo">
-						<div class="message-bg">
+				<div class="slideshow-item" style="display: block;">
+					<div class="slideshow-item-description">
+						<div class="slideshow-item-description-container">
 							<span class="movie-title">The Dark Knight</span><br>
 							<span class="movie-info">2008 | Action, Crime | IMDB: 9.0</span><br>
 							<span class="movie-description">When the menace known as the Joker wreaks havoc and chaos on
@@ -56,12 +56,12 @@
 						</div>
 
 					</div>
-					<img class="slider-batman" src="./images/slider-batman.png" style="width:100%">
+					<img class="slider-batman" src="./images/slider-batman.png">
 				</div>
 
-				<div class="Containers">
-					<div class="MessageInfo">
-						<div class="message-bg">
+				<div class="slideshow-item">
+					<div class="slideshow-item-description">
+						<div class="slideshow-item-description-container">
 
 							<span class="movie-title">Top Gun: Maverick</span><br>
 							<span class="movie-info">2022 | Action, Drama | IMDB: 8.4</span><br>
@@ -71,12 +71,12 @@
 							<button class="movie-read-more">Read More</button>
 						</div>
 					</div>
-					<img class="slider-maverick" src="./images/slider-maverick.png" style="width:100%">
+					<img class="slider-maverick" src="./images/slider-maverick.png">
 				</div>
 
-				<div class="Containers">
-					<div class="MessageInfo">
-						<div class="message-bg">
+				<div class="slideshow-item">
+					<div class="slideshow-item-description">
+						<div class="slideshow-item-description-container">
 
 							<span class="movie-title">Interstellar</span><br>
 							<span class="movie-info">2014 | Adventure, Sci-Fi | IMDB: 8.6</span><br>
@@ -86,15 +86,15 @@
 							<button class="movie-read-more">Read More</button>
 						</div>
 					</div>
-					<img class="slider-interstellar" src="./images/slider-interstellar.png" style="width:100%">
+					<img class="slider-interstellar" src="./images/slider-interstellar.png">
 				</div>
 
-				<a class="Back" onclick="previousSlide()">&#10094;</a>
-				<a class="forward" onclick="nextSlide()">&#10095;</a>
-				<div class="dots-container">
-					<span class="dots" onclick="changeSlide(1)"></span>
-					<span class="dots" onclick="changeSlide(2)"></span>
-					<span class="dots" onclick="changeSlide(3)"></span>
+				<a class="back-button" onclick="previousSlide()">&#10094;</a>
+				<a class="forward-button" onclick="nextSlide()">&#10095;</a>
+				<div class="slideshow-dots-container">
+					<span class="slideshow-dot" onclick="changeSlide(1)"></span>
+					<span class="slideshow-dot" onclick="changeSlide(2)"></span>
+					<span class="slideshow-dot" onclick="changeSlide(3)"></span>
 				</div>
 			</div>
 
@@ -103,12 +103,10 @@
 			<div class="section-header">
 				<h2 class="section-header-title">
 					Featured Movies
-
 				</h2>
 			</div>
-
 			<div class="featured-movies-container">
-				<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 featured-movie">
+				<div class="featured-movie featured-movie-flexbox">
 					<img class="featured-movie-image" src="./images/godzilla_poster.png">
 					<div class="featured-movie-caption">
 						<span class="featured-movie-caption-title">Gdzilla v Kong</span><br>
@@ -116,7 +114,7 @@
 						<button class="featured-movie-caption-button">Read More</button>
 					</div>
 				</div>
-				<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 featured-movie">
+				<div class="featured-movie featured-movie-flexbox">
 					<img class="featured-movie-image" src="./images/batman_poster.png">
 					<div class="featured-movie-caption">
 						<span class="featured-movie-caption-title">Batman</span><br>
@@ -124,7 +122,7 @@
 						<button class="featured-movie-caption-button">Read More</button>
 					</div>
 				</div>
-				<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 featured-movie">
+				<div class="featured-movie featured-movie-flexbox">
 					<img class="featured-movie-image" src="./images/black_widow_poster.png">
 					<div class="featured-movie-caption">
 						<span class="featured-movie-caption-title">Black Widow</span><br>
@@ -132,7 +130,7 @@
 						<button class="featured-movie-caption-button">Read More</button>
 					</div>
 				</div>
-				<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 featured-movie">
+				<div class="featured-movie featured-movie-flexbox">
 					<img class="featured-movie-image" src="./images/mortal_kombat_poster.png">
 					<div class="featured-movie-caption">
 						<span class="featured-movie-caption-title">Mortal Kombat</span><br>
@@ -140,7 +138,7 @@
 						<button class="featured-movie-caption-button">Read More</button>
 					</div>
 				</div>
-				<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 featured-movie">
+				<div class="featured-movie featured-movie-flexbox">
 					<img class="featured-movie-image" src="./images/uncharted_poster.png">
 					<div class="featured-movie-caption">
 						<span class="featured-movie-caption-title">Uncharted</span><br>
@@ -148,7 +146,7 @@
 						<button class="featured-movie-caption-button">Read More</button>
 					</div>
 				</div>
-				<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 featured-movie">
+				<div class="featured-movie featured-movie-flexbox">
 					<img class="featured-movie-image" src="./images/007_poster.png">
 					<div class="featured-movie-caption">
 						<span class="featured-movie-caption-title">No Time To Die</span><br>
@@ -159,7 +157,7 @@
 			</div>
 		</section>
 		<section class="latest-popular-section">
-			<div class="latest-popular-two-columns" style="margin-bottom: 10px;">
+			<div class="latest-popular-two-columns">
 				<div class="latest-popular-movies-section">
 					<div class="section-header">
 						<h2 class="section-header-title">
@@ -167,84 +165,84 @@
 						</h2>
 					</div>
 					<div class="popular-movies">
-						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 popular-movie">
+						<div class="popular-movie popular-movie-flexbox">
 							<img class="popular-movie-image " src="./images/fast_and_furious.jpg">
 							<div class="popular-movie-caption">
 								<span class="popular-movie-caption-title">Fast & Furious 9</span><br>
 								<span class="popular-movie-caption-year">2022 • 102 m</span><br>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 popular-movie">
+						<div class="popular-movie popular-movie-flexbox">
 							<img class="popular-movie-image" src="./images/tenet.jpg">
 							<div class="popular-movie-caption">
 								<span class="popular-movie-caption-title">Tenet</span><br>
 								<span class="popular-movie-caption-year">2022 • 102 m</span><br>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 popular-movie">
+						<div class="popular-movie popular-movie-flexbox">
 							<img class="popular-movie-image" src="./images/red_notice.jpg">
 							<div class="popular-movie-caption">
 								<span class="popular-movie-caption-title">Red Notice</span><br>
 								<span class="popular-movie-caption-year">2022 • 102 m</span><br>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 popular-movie">
+						<div class="popular-movie popular-movie-flexbox">
 							<img class="popular-movie-image" src="./images/morbius.jpg">
 							<div class="popular-movie-caption">
 								<span class="popular-movie-caption-title">Morbius</span><br>
 								<span class="popular-movie-caption-year">2022 • 102 m</span><br>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 popular-movie">
+						<div class="popular-movie popular-movie-flexbox">
 							<img class="popular-movie-image" src="./images/inception.jpg">
 							<div class="popular-movie-caption">
 								<span class="popular-movie-caption-title">Inception</span><br>
 								<span class="popular-movie-caption-year">2022 • 102 m</span><br>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 popular-movie">
+						<div class="popular-movie popular-movie-flexbox">
 							<img class="popular-movie-image" src="./images/matrix.jpg">
 							<div class="popular-movie-caption">
 								<span class="popular-movie-caption-title">Matrix</span><br>
 								<span class="popular-movie-caption-year">2022 • 102 m</span><br>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 popular-movie">
+						<div class="popular-movie popular-movie-flexbox">
 							<img class="popular-movie-image" src="./images/avengers.jpg">
 							<div class="popular-movie-caption">
 								<span class="popular-movie-caption-title">The Avengers</span><br>
 								<span class="popular-movie-caption-year">2022 • 102 m</span><br>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 popular-movie">
+						<div class="popular-movie popular-movie-flexbox">
 							<img class="popular-movie-image" src="./images/dune.jpg">
 							<div class="popular-movie-caption">
 								<span class="popular-movie-caption-title">Dune</span><br>
 								<span class="popular-movie-caption-year">2022 • 102 m</span><br>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 popular-movie">
+						<div class="popular-movie popular-movie-flexbox">
 							<img class="popular-movie-image" src="./images/jurassic_park.jpg">
 							<div class="popular-movie-caption">
 								<span class="popular-movie-caption-title">Jurrasic Park</span><br>
 								<span class="popular-movie-caption-year">2022 • 102 m</span><br>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 popular-movie">
+						<div class="popular-movie popular-movie-flexbox">
 							<img class="popular-movie-image" src="./images/black_panther.jpg">
 							<div class="popular-movie-caption">
 								<span class="popular-movie-caption-title">Black Panther</span><br>
 								<span class="popular-movie-caption-year">2022 • 102 m</span><br>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 popular-movie">
+						<div class="popular-movie popular-movie-flexbox">
 							<img class="popular-movie-image" src="./images/wrath_of_man.jpg">
 							<div class="popular-movie-caption">
 								<span class="popular-movie-caption-title">Wrath Of Man</span><br>
 								<span class="popular-movie-caption-year">2022 • 102 m</span><br>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 popular-movie">
+						<div class="popular-movie popular-movie-flexbox">
 							<img class="popular-movie-image" src="./images/avatar.jpg">
 							<div class="popular-movie-caption">
 								<span class="popular-movie-caption-title">Avatar</span><br>
@@ -260,88 +258,88 @@
 						</h2>
 					</div>
 					<div class="actors">
-						<div class="col-md-4 col-sm-6 col-xs-12 actor">
+						<div class="actor actor-flexbox">
 							<img class="actor-image" src="./images/margot_robbie.jpg">
 							<div class="actor-caption">
 								<span class="actor-caption-title">Margot Robbie</span><br>
-								<span class="popular-movie-caption-year">32 years old</span><br>
+								<span class="actor-caption-years">32 years old</span><br>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 actor">
+						<div class="actor actor-flexbox">
 							<img class="actor-image" src="./images/nicolas_cage.png">
 							<div class="actor-caption">
 								<span class="actor-caption-title">Nicolas Cage</span><br>
-								<span class="popular-movie-caption-year">32 years old</span><br>
+								<span class="actor-caption-years">32 years old</span><br>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 actor">
+						<div class="actor actor-flexbox">
 							<img class="actor-image" src="./images/jenna_ortega.jpg">
 							<div class="actor-caption">
 								<span class="actor-caption-title">Jenna Ortega</span><br>
-								<span class="popular-movie-caption-year">32 years old</span><br>
+								<span class="actor-caption-years">32 years old</span><br>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 actor">
+						<div class="actor actor-flexbox">
 							<img class="actor-image" src="./images/daniel_craig.jpg">
 							<div class="actor-caption">
 								<span class="actor-caption-title">Daniel Craig</span><br>
-								<span class="popular-movie-caption-year">32 years old</span><br>
+								<span class="actor-caption-years">32 years old</span><br>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 actor">
+						<div class="actor actor-flexbox">
 							<img class="actor-image" src="./images/scarlett_johansson.jpg">
 							<div class="actor-caption">
 								<span class="actor-caption-title">Scarlett Johansson</span><br>
-								<span class="popular-movie-caption-year">32 years old</span><br>
+								<span class="actor-caption-years">32 years old</span><br>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 actor">
+						<div class="actor actor-flexbox">
 							<img class="actor-image" src="./images/tom_cruise.jpg">
 							<div class="actor-caption">
 								<span class="actor-caption-title">Tom Cruise</span><br>
-								<span class="popular-movie-caption-year">32 years old</span><br>
+								<span class="actor-caption-years">32 years old</span><br>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 actor">
+						<div class="actor actor-flexbox">
 							<img class="actor-image" src="./images/tom_holland.jpg">
 							<div class="actor-caption">
 								<span class="actor-caption-title">Tom Holland</span><br>
-								<span class="popular-movie-caption-year">32 years old</span><br>
+								<span class="actor-caption-years">32 years old</span><br>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 actor">
+						<div class="actor actor-flexbox">
 							<img class="actor-image" src="./images/anya_taylor_joy.jpg">
 							<div class="actor-caption">
 								<span class="actor-caption-title">Anya Taylor-Joy</span><br>
-								<span class="popular-movie-caption-year">32 years old</span><br>
+								<span class="actor-caption-years">32 years old</span><br>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 actor">
+						<div class="actor actor-flexbox">
 							<img class="actor-image" src="./images/brad_pitt.jpg">
 							<div class="actor-caption">
 								<span class="actor-caption-title">Brad Pitt</span><br>
-								<span class="popular-movie-caption-year">32 years old</span><br>
+								<span class="actor-caption-years">32 years old</span><br>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 actor">
+						<div class="actor actor-flexbox">
 							<img class="actor-image" src="./images/ryan_reynolds.jpg">
 							<div class="actor-caption">
 								<span class="actor-caption-title">Ryan Reynolds</span><br>
-								<span class="popular-movie-caption-year">32 years old</span><br>
+								<span class="actor-caption-years">32 years old</span><br>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 actor">
+						<div class="actor actor-flexbox">
 							<img class="actor-image" src="./images/leonardo-dicaprio.jpg">
 							<div class="actor-caption">
 								<span class="actor-caption-title">Leonardo DiCaprio</span><br>
-								<span class="popular-movie-caption-year">32 years old</span><br>
+								<span class="actor-caption-years">32 years old</span><br>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12 actor">
+						<div class="actor actor-flexbox">
 							<img class="actor-image" src="./images/robert_downey_jr.jpg">
 							<div class="actor-caption">
 								<span class="actor-caption-title">Robert Downey Jr.</span><br>
-								<span class="popular-movie-caption-year">32 years old</span><br>
+								<span class="actor-caption-years">32 years old</span><br>
 							</div>
 						</div>
 					</div>
@@ -362,19 +360,19 @@
 	<footer class="footer">
 		<div class="footer-columns">
 
-			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 footer-column">
-				<div class="box">
+			<div class="footer-column footer-flexbox">
+				<div class="footer-item-container">
 					<h2>Subscribe to our Newsletter</h2>
 					<p>Our weekly newsletter provides you with the latest and most important happenings in the industry.</p>
-					<div class="form-control">
-					  <input type="text" class="input" placeholder="Enter e-mail adress" />
-					  <button id="subscribe" class="btn">Subscribe</button>
+					<div class="subscribe-form">
+						<input type="text" class="subscribe-input" placeholder="Enter e-mail adress" />
+						<button id="subscribe" class="subscribe-button">Subscribe</button>
 					</div>
-					<p id="successully-subscribed" style="margin: 0;color: green; display: none;">You have successully subscribed!</p>
-				  </div>
+					<p id="successully-subscribed">You have successully subscribed!</p>
+				</div>
 			</div>
-			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 footer-column">
-				<div class="box">
+			<div class="footer-column footer-flexbox">
+				<div class="footer-item-container">
 					<h2>Usefull Links</h2>
 					<ul class="footer-usefull-links">
 						<li><a href="#">Home</a></li>
@@ -383,7 +381,7 @@
 						<li><a href="#">Contact</a></li>
 					</ul>
 					<div class="footer-social-links">
-						<a class="social-link social-facebook">
+						<a class="social-link">
 							<i class="fa fa-facebook"></i>
 						</a>
 						<a class="social-link">
@@ -395,18 +393,18 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 footer-column">
-				<div class="box">
+			<div class="footer-column footer-flexbox-last">
+				<div class="footer-item-container">
 					<h2>Contact Us</h2>
 					<div class="footer-contact-us-container">
-						<input type="text" class="input" placeholder="Enter e-mail adress" />
+						<input type="text" class="contact-us-input" placeholder="Enter e-mail adress" />
 					</div>
 					<div class="footer-contact-us-container">
 						<textarea class="footer-contact-us-textarea" placeholder="Type your message" rows="3"></textarea>
-					  <button id="message-send" class="footer-contact-us-button">Send</button>
+						<button id="message-send" class="footer-contact-us-button">Send</button>
 					</div>
-					<p id="message-sent" style="margin: 10px; color: green; display: none;">We received your message!</p>
-				  </div>
+					<p id="message-sent">We received your message!</p>
+				</div>
 			</div>
 		</div>
 		<div class="footer-bottom">
