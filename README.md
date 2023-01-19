@@ -4,4 +4,4 @@ https://alexpournaras.github.io/movie-nachos/
 
 TODO:
 - Add correct texts
-- Start implementing movies page
+- Add images and titles for movies page
