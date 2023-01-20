@@ -78,6 +78,15 @@ body {
 	white-space: nowrap;
 }
 
+.menu-link-active {
+	font-size: larger;
+	text-decoration: none;
+	color: orange;
+	margin: 0 10px;
+	padding: 0px 5px 0px 5px;
+	white-space: nowrap;
+}
+
 .menu-link:hover {
 	color: var(--main-color);
 }
@@ -714,6 +723,10 @@ body {
     height: 33px;
     font-size: 16px;
 	cursor: pointer;
+}
+
+.movies-filter-submit-button:hover {
+    background: var(--linear-gradient-reverse);
 }
 
 .filter-dropdown {
