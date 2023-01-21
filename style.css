@@ -712,7 +712,6 @@ body {
     height: 33px;
     font-size: 13px;
 	cursor: pointer;
-	min-width: 120px;
 }
 
 .movies-filter-dropdown-button:hover {
@@ -730,7 +729,6 @@ body {
     height: 33px;
     font-size: 16px;
 	cursor: pointer;
-	min-width: 120px;
 }
 
 .movies-filter-submit-button:hover {
@@ -1027,6 +1025,20 @@ body {
 	.movie-plot-container {
 		padding: 0px 0px 20px 0px;
 	}
+
+	.movies-filters-container {
+		flex-wrap: wrap;
+	}
+
+	.movies-filter-dropdown {
+		width: 50% !important;
+	}
+
+	.movies-filter-dropdown-2-col {
+		flex-grow: 100;
+		width: unset !important;
+		margin-right: 0;
+	}
 }
 
 @media (max-width: 800px) {
@@ -1147,6 +1159,26 @@ body {
 	}
 
 	.movies-search-input {
+		width: 100%;
+	}
+
+	.movies-filters-container {
+		display: flex;
+	}
+
+	.movies-filter-dropdown {
+		width: 25%;
+	}
+	
+	.movies-filter-dropdown-button {
+		width: 100%;
+	}
+
+	.movies-filter-submit {
+		flex-grow: 100;
+	}
+
+	.movies-filter-submit-button {
 		width: 100%;
 	}
 }
