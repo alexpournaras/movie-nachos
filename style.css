@@ -181,6 +181,10 @@ body {
 	cursor: pointer;
 }
 
+.movie-read-more:hover {
+	background: var(--linear-gradient-reverse);
+}
+
 .slider-batman {
 	width: 100%;
 	object-position: 55% 40%;
@@ -296,6 +300,7 @@ body {
 
 .featured-movie:hover > .featured-movie-caption > .featured-movie-caption-button {
 	cursor: pointer;
+	background: var(--linear-gradient-reverse);
 }
 
 .featured-movie-image {
@@ -527,6 +532,10 @@ body {
 	cursor: pointer;
 }
 
+.subscribe-button:hover {
+	background: var(--linear-gradient-reverse);
+}
+
 #successully-subscribed {
 	margin: 0;
 	color: green;
@@ -583,6 +592,10 @@ body {
 	margin-top: 5px;
 	padding: 8px 25px;
 	cursor: pointer;
+}
+
+.footer-contact-us-button:hover {
+	background: var(--linear-gradient-reverse);
 }
 
 #message-sent {
