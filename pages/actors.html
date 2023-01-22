@@ -41,223 +41,222 @@
 	</header>
 
 	<main class="main">
-		<section class="movies-section">
+		<section class="actors-section">
 			<div class="section-header">
-				<h2 class="movies-section-header-title">
+				<h2 class="actors-section-header-title">
 					Actors
 				</h2>
 			</div>
 			<div class="actors-filters">
 				<form class="actors-filters-container" action="./actors.html">
-					<div class="movies-filter-dropdown">
-						<button id="filter-sort" class="movies-filter-dropdown-button">
+					<div class="actors-filter-dropdown">
+						<button id="filter-sort" class="actors-filter-dropdown-button">
 							<i class="fa fa-sort"></i>
 							Sort: <span>Default</span>
 						</button>
 						<ul id="filter-sort-dropdown" class="filter-dropdown">
 							<li><input name="sort" id="sort_default" type="radio" value="default" checked="checked"><label for="sort_default">Default</label></li>
 							<li><input name="sort" id="sort_post_date" type="radio" value="post_date"><label for="sort_post_date">Recently Added</label></li>
-							<li><input name="sort" id="sort_views" type="radio" value="views"><label for="sort_views">Most Watched</label></li>
-							<li><input name="sort" id="sort_title" type="radio" value="title"><label for="sort_title">Name</label></li>
+							<li><input name="sort" id="sort_views" type="radio" value="views"><label for="sort_views">Most Popular</label></li>
+							<li><input name="sort" id="sort_title" type="radio" value="title"><label for="sort_title">Alphabetical</label></li>
 							<li><input name="sort" id="sort_imdb" type="radio" value="imdb"><label for="sort_imdb">IMDb</label></li>
-							<li><input name="sort" id="sort_year" type="radio" value="year"><label for="sort_year">Release Date</label></li>
 							<li><input name="sort" id="sort_rated_scores" type="radio" value="rated_scores"><label for="sort_rated_scores">Site Rating</label></li>
 						</ul>
 					</div>
-					<div class="movies-filter-submit">
-						<button type="submit" class="movies-filter-submit-button">
+					<div class="actors-filter-submit">
+						<button type="submit" class="actors-filter-submit-button">
 							<i class="fa fa-filter"></i>
 							Filter
 						</button>
 					</div>
 				</form>
-				<div class="movies-search-container">
-					<div class="movies-search">
-					   <form class="movies-search-form" autocomplete="off" action="search">
+				<div class="actors-search-container">
+					<div class="actors-search">
+					   <form class="actors-search-form" autocomplete="off" action="search">
 						<span>
-							<i class="fa fa-search movies-search-icon"></i>
-							<input class="movies-search-input" type="text" name="keyword" placeholder="Enter your keywords..." autocomplete="off">
+							<i class="fa fa-search actors-search-icon"></i>
+							<input class="actors-search-input" type="text" name="keyword" placeholder="Enter your keywords..." autocomplete="off">
 						</span>
 					   </form>
 					</div>
 				 </div>
 			</div>
-			<div class="movies">
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/margot_robbie.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Margot Robbie</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+			<div class="actors-container">
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/margot_robbie.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Margot Robbie</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/nicolas_cage.png">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Nicolas Cage</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/nicolas_cage.png">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Nicolas Cage</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/jenna_ortega.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Jenna Ortega</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/jenna_ortega.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Jenna Ortega</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/daniel_craig.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Daniel Craig</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/daniel_craig.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Daniel Craig</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/scarlett_johansson.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Scarlett Johnansson</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/scarlett_johansson.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Scarlett Johnansson</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/tom_cruise.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Tom Cruise</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/tom_cruise.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Tom Cruise</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/tom_holland.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Tom Holland</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/tom_holland.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Tom Holland</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/anya_taylor_joy.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Anya Taylor-Joy</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/anya_taylor_joy.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Anya Taylor-Joy</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/brad_pitt.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Brad Pitt</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/brad_pitt.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Brad Pitt</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/ryan_reynolds.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Ryan Reynolds</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/ryan_reynolds.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Ryan Reynolds</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/leonardo-dicaprio.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Leonardo DiCaprio</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/leonardo-dicaprio.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Leonardo DiCaprio</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/robert_downey_jr.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Robert Downey Jr</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/robert_downey_jr.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Robert Downey Jr</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/gal_gadot.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Gal Gadot</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/gal_gadot.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Gal Gadot</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/channing_tatum.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Channing Tatum</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/channing_tatum.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Channing Tatum</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/sandra_bullock.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Sandra Bullock</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/sandra_bullock.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Sandra Bullock</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/ben_affleck.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Ben Affleck</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/ben_affleck.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Ben Affleck</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/jeniffer_lawrence.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Jeniffer Lawrence</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/jeniffer_lawrence.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Jeniffer Lawrence</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/matt_damon.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Matt Damon</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/matt_damon.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Matt Damon</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/dwayne_johnson.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Dwayne Johnson</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/dwayne_johnson.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Dwayne Johnson</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/jeniffer_aniston.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Jeniffer Aniston</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/jeniffer_aniston.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Jeniffer Aniston</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/will_smith.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Will Smith</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/will_smith.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Will Smith</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/kaley_cuoco.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Kaley Cuoco</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/kaley_cuoco.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Kaley Cuoco</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/chris_evans.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Chris Evans</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/chris_evans.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Chris Evans</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
-				<a href="../pages/actor.html" tabindex="0" role="button" class="movie movie-flexbox">
-					<img class="movie-image" src="../images/actors/cameron_diaz.jpg">
-					<div class="movie-caption">
-						<span class="movie-caption-title">Cameron Diaz</span><br>
-						<span class="movie-caption-year">32 years old</span><br>
+				<a href="../pages/actor.html" tabindex="0" role="button" class="actor-container actor-container-flexbox">
+					<img class="actor-container-image" src="../images/actors/cameron_diaz.jpg">
+					<div class="actor-container-caption">
+						<span class="actor-container-caption-title">Cameron Diaz</span><br>
+						<span class="actor-container-caption-year">32 years old</span><br>
 					</div>
 				</a>
 				
 
 			</div>
-			<div class="movies-pagination">
-				<ul class="movies-pagination-container movies-pagination-ul">
+			<div class="actors-pagination">
+				<ul class="actors-pagination-container actors-pagination-ul">
 					<li><a href="#">«</a></li>
-					<li><a href="#" class="movies-pagination-active">1</a></li>
+					<li><a href="#" class="actors-pagination-active">1</a></li>
 					<li><a href="#">2</a></li>
 					<li><a href="#">3</a></li>
 					<li><a href="#">4</a></li>
