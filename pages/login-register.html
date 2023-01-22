@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Movie Nachos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../style.css">
+	<script src="../script.js"></script>
+	<script src="../scripts/login-register.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="logo-container">
+			<a href="../index.html">
+				<img class="logo" src="../images/logo_black_background.png">
+			</a>
+		</div>
+		<a id="burger-menu" class="burger-menu"><i class="fa fa-bars"></i></a>
+		<nav class="menu-nav">
+			<ul id="menu-links" class="menu-links">
+				<li class="menu-item"><a class="menu-link" href="../index.html">Home</a></li>
+				<li class="menu-item"><a class="menu-link" href="./movies.html">Movies</a></li>
+				<li class="menu-item"><a class="menu-link" href="./actors.html">Actors</a></li>
+				<li class="menu-item"><a class="menu-link" href="./news.html">News</a></li>
+			</ul>
+		</nav>
+		<div class="header-social">
+			<a class="social-link">
+				<i class="fa fa-facebook"></i>
+			</a>
+			<a class="social-link">
+				<i class="fa fa-twitter"></i>
+			</a>
+			<a class="social-link">
+				<i class="fa fa-instagram"></i>
+			</a>
+		</div>
+	</header>
+
+	<main class="main">
+		<section class="login-register-section">
+			<div class="container">
+				<div class="forms">
+					<div id="login-form" class="form login fade">
+						<span class="title">Login</span>
+		
+						<form action="#">
+							<div class="input-field">
+								<input type="text" placeholder="Enter your email" required>
+								<i class="uil uil-envelope icon"></i>
+							</div>
+							<div class="input-field">
+								<input type="password" class="password" placeholder="Enter your password" required>
+								<i class="uil uil-lock icon"></i>
+								<i class="uil uil-eye-slash showHidePw"></i>
+							</div>
+		
+							<div class="checkbox-text">
+								<div class="checkbox-content">
+									<input type="checkbox" id="logCheck">
+									<label for="logCheck" class="text">Remember me</label>
+								</div>
+								
+								<a href="#" class="text">Forgot password?</a>
+							</div>
+		
+							<div class="input-field button">
+								<input type="button" value="Login">
+							</div>
+						</form>
+		
+						<div class="login-signup">
+							<span class="text">Not a member?
+								<a href="#" id="signup-button" class="text signup-link">Signup Now</a>
+							</span>
+						</div>
+					</div>
+		
+					<!-- Registration Form -->
+					<div id="signup-form" class="form signup fade" style="display: none">
+						<span class="title">Registration</span>
+		
+						<form action="#">
+							<div class="input-field">
+								<input type="text" placeholder="Enter your name" required>
+								<i class="uil uil-user"></i>
+							</div>
+							<div class="input-field">
+								<input type="text" placeholder="Enter your email" required>
+								<i class="uil uil-envelope icon"></i>
+							</div>
+							<div class="input-field">
+								<input type="password" class="password" placeholder="Create a password" required>
+								<i class="uil uil-lock icon"></i>
+							</div>
+							<div class="input-field">
+								<input type="password" class="password" placeholder="Confirm a password" required>
+								<i class="uil uil-lock icon"></i>
+								<i class="uil uil-eye-slash showHidePw"></i>
+							</div>
+		
+							<div class="checkbox-text">
+								<div class="checkbox-content">
+									<input type="checkbox" id="termCon">
+									<label for="termCon" class="text">I accepted all terms and conditions</label>
+								</div>
+							</div>
+		
+							<div class="input-field button">
+								<input type="button" value="Signup">
+							</div>
+						</form>
+		
+						<div class="login-signup">
+							<span class="text">Already a member?
+								<a href="#" id="login-button" class="text login-link">Login Now</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+        </section>
+		<div id="cookieNotification" class="cookie-notification">
+			<div class="cookie-container">
+				<p class="cookie-description">We use cookies to offer to you the best possible user experience. By using our services, you accept the use of cookies.</p>
+				<div class="cookie-buttons-container">
+					<button type="button" id="closeCookie" class="cookie-button-close">Close</button>
+					<button type="button" id="acceptCookie" class="cookie-button-ok">OK</button>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="footer-columns">
+
+			<div class="footer-column footer-flexbox">
+				<div class="footer-item-container">
+					<h2>Subscribe to our Newsletter</h2>
+					<p>Our weekly newsletter provides you with the latest and most important happenings in the industry.</p>
+					<div class="subscribe-form">
+						<input type="text" class="subscribe-input" placeholder="Enter e-mail adress" />
+						<button id="subscribe" class="subscribe-button">Subscribe</button>
+					</div>
+					<p id="successully-subscribed">You have successully subscribed!</p>
+				</div>
+			</div>
+			<div class="footer-column footer-flexbox">
+				<div class="footer-item-container">
+					<h2>Usefull Links</h2>
+					<ul class="footer-usefull-links">
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="./movies.html">Movies</a></li>
+						<li><a href="./actors.html">Actors</a></li>
+						<li><a href="./news.html">News</a></li>
+					</ul>
+					<div class="footer-social-links">
+						<a class="social-link">
+							<i class="fa fa-facebook"></i>
+						</a>
+						<a class="social-link">
+							<i class="fa fa-twitter"></i>
+						</a>
+						<a class="social-link">
+							<i class="fa fa-instagram"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-column footer-flexbox-last">
+				<div class="footer-item-container">
+					<h2>Contact Us</h2>
+					<div class="footer-contact-us-container">
+						<input type="text" class="contact-us-input" placeholder="Enter e-mail adress" />
+					</div>
+					<div class="footer-contact-us-container">
+						<textarea class="footer-contact-us-textarea" placeholder="Type your message" rows="3"></textarea>
+						<button id="message-send" class="footer-contact-us-button">Send</button>
+					</div>
+					<p id="message-sent">We received your message!</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p class="copyright">Copyright &copy; 2023 • <a class="copyright-title" href="../index.html">Movie Nachos</a> • <a class="copyright-author" target="_blank" href="https://www.linkedin.com/in/alpournaras/">@alexpournaras</a></p>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>
