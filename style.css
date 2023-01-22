@@ -639,7 +639,7 @@ body {
 	font-size: 33px;
 }
 
-.movies-filters {
+.movies-filters, .actors-filters {
 	padding: 5px 0px;
 	display: flex;
 }
@@ -668,7 +668,7 @@ body {
 }
 
 .movie-caption-title {
-	font-size: 17px;
+	font-size: 15px;
 	font-weight: 900;
 }
 
@@ -686,7 +686,7 @@ body {
 	display: block;
 }
 
-.movies-filters-container {
+.movies-filters-container, .actors-filters-container {
     display: inline-block;
 }
 
@@ -754,6 +754,15 @@ body {
 }
 
 .movies-filters-container .movies-filter-dropdown .filter-dropdown {
+    margin-top: 5px;
+    font-size: 18px;
+    background: var(--background-gray);
+    padding: 20px;
+    border-radius: 10px;
+	color: var(--text-color);
+}
+
+.actors-filters-container .movies-filter-dropdown .filter-dropdown {
     margin-top: 5px;
     font-size: 18px;
     background: var(--background-gray);
@@ -1026,7 +1035,7 @@ body {
 		padding: 0px 0px 20px 0px;
 	}
 
-	.movies-filters-container {
+	.movies-filters-container, .actors-filters-container {
 		flex-wrap: wrap;
 	}
 
@@ -1149,7 +1158,7 @@ body {
 		min-width: unset;
 	}
 
-	.movies-filters {
+	.movies-filters, .actors-filters {
 		display: block;
 	}
 
@@ -1162,8 +1171,12 @@ body {
 		width: 100%;
 	}
 
-	.movies-filters-container {
+	.movies-filters-container, .actors-filters-container {
 		display: flex;
+	}
+
+	.actors-filters-container > .movies-filter-dropdown {
+		width: 50% !important;
 	}
 
 	.movies-filter-dropdown {
@@ -1189,7 +1202,7 @@ body {
 	}
 
 	.movie-caption-title {
-		font-size: 15px;
+		font-size: 13px;
 	}
 
 	.movie-content-section, .movie-cast-section, .similar-movies-section {
