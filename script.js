@@ -28,19 +28,44 @@ document.addEventListener('DOMContentLoaded', function() {
 		burgerIcon.classList.toggle('fa-bars');
 	});
 
-	// Subscribe action on click
-	const subscribeBtn = document.getElementById('subscribe');
+	// Subscribe form action
+	const subscribeForm = document.getElementById('subscribe-form');
 	const subscribeConfirmation = document.getElementById('successully-subscribed');
 
-	subscribeBtn.addEventListener('click', function () {
+	subscribeForm.addEventListener('submit', function (e) {
+		e.preventDefault()
+		let email = e.target.elements.email.value;
+
+		// Retrieve subscribed_emails from local storage
+		let subscribed_emails = JSON.parse(localStorage.getItem('subscribed_emails')) || [];
+		subscribed_emails.push(email);
+
+		// Save email into local storage
+		localStorage.setItem('subscribed_emails', JSON.stringify(subscribed_emails));
 		subscribeConfirmation.style.display = "block";
+		
+		// Clear all form inputs
+		subscribeForm.reset();
 	});
 
-	// Message sent action on click
-	const messageSendBtn = document.getElementById('message-send');
+	// Message send form action
+	const contactUsForm = document.getElementById('contact-us-form');
 	const messageSentConfirmation = document.getElementById('message-sent');
 
-	messageSendBtn.addEventListener('click', function () {
+	contactUsForm.addEventListener('submit', function (e) {
+		e.preventDefault()
+		let email = e.target.elements.email.value;
+		let message = e.target.elements.message.value;
+
+		// Retrieve all messages from local storage
+		let messages = JSON.parse(localStorage.getItem('messages')) || [];
+		messages.push({ email: email, message: message});
+
+		// Save email and message into local storage
+		localStorage.setItem('messages', JSON.stringify(messages));
 		messageSentConfirmation.style.display = "block";
+		
+		// Clear all form inputs
+		contactUsForm.reset();
 	});
 });

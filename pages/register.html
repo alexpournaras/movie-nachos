@@ -8,6 +8,7 @@
 	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="../style.css">
 	<script src="../script.js"></script>
+	<script src="../scripts/register.js"></script>
 </head>
 
 <body>
@@ -47,21 +48,21 @@
 					<div id="signup-form" class="form signup">
 						<span class="title">Registration</span>
 		
-						<form action="#">
+						<form id="register-form" action="#">
 							<div class="input-field">
-								<input type="text" placeholder="Enter your username" required>
+								<input type="text" name="username" placeholder="Enter your username" required>
 								<i class="fa fa-user"></i>
 							</div>
 							<div class="input-field">
-								<input type="text" placeholder="Enter your email" required>
+								<input type="text" name="email" placeholder="Enter your email" required>
 								<i class="fa fa-envelope"></i>
 							</div>
 							<div class="input-field">
-								<input type="password" class="password" placeholder="Create a password" required>
+								<input type="password" name="password" class="password" placeholder="Create a password" required>
 								<i class="fa fa-unlock-alt"></i>
 							</div>
 							<div class="input-field">
-								<input type="password" class="password" placeholder="Confirm a password" required>
+								<input type="password" name="password_confirmation" class="password" placeholder="Confirm a password" required>
 								<i class="fa fa-lock"></i>
 							</div>
 		
@@ -73,10 +74,12 @@
 							</div>
 		
 							<div class="input-field button">
-								<input type="button" value="Signup">
+								<input type="submit">
 							</div>
 						</form>
-		
+						
+						<p id="successully-registered">You have successully signed up!</p>
+
 						<div class="login-signup">
 							<span class="text">Already a member?
 								<a href="./login.html" class="text login-link">Login Now</a>
@@ -104,10 +107,10 @@
 				<div class="footer-item-container">
 					<h2>Subscribe to our Newsletter</h2>
 					<p>Our weekly newsletter provides you with the latest and most important happenings in the industry.</p>
-					<div class="subscribe-form">
-						<input type="text" class="subscribe-input" placeholder="Enter e-mail adress" />
-						<button id="subscribe" class="subscribe-button">Subscribe</button>
-					</div>
+					<form id="subscribe-form" class="subscribe-form" action="#">
+						<input type="text" name="email" class="subscribe-input" placeholder="Enter e-mail adress" required/>
+						<button type="submit" class="subscribe-button">Subscribe</button>
+					</form>
 					<p id="successully-subscribed">You have successully subscribed!</p>
 				</div>
 			</div>
@@ -136,13 +139,15 @@
 			<div class="footer-column footer-flexbox-last">
 				<div class="footer-item-container">
 					<h2>Contact Us</h2>
-					<div class="footer-contact-us-container">
-						<input type="text" class="contact-us-input" placeholder="Enter e-mail adress" />
-					</div>
-					<div class="footer-contact-us-container">
-						<textarea class="footer-contact-us-textarea" placeholder="Type your message" rows="3"></textarea>
-						<button id="message-send" class="footer-contact-us-button">Send</button>
-					</div>
+					<form id="contact-us-form" action="#">
+						<div class="footer-contact-us-container">
+							<input type="text" name="email" class="contact-us-input" placeholder="Enter e-mail adress" required/>
+						</div>
+						<div class="footer-contact-us-container">
+							<textarea name="message" class="footer-contact-us-textarea" placeholder="Type your message" rows="3" required></textarea>
+							<button type="submit" class="footer-contact-us-button">Send</button>
+						</div>
+					</form>
 					<p id="message-sent">We received your message!</p>
 				</div>
 			</div>
@@ -151,7 +156,6 @@
 			<p class="copyright">Copyright &copy; 2023 • <a class="copyright-title" href="../index.html">Movie Nachos</a> • <a class="copyright-author" target="_blank" href="https://www.linkedin.com/in/alpournaras/">@alexpournaras</a></p>
 		</div>
 	</footer>
-
 
 </body>
 

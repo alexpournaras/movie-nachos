@@ -506,7 +506,7 @@ body {
 }
 
 .footer-column {
-	padding: 5px 10px !important;
+	padding: 3px 5px !important;
 }
 
 .footer-item-container {
@@ -1008,6 +1008,24 @@ body {
     background-size: cover;
 }
 
+#successully-registered {
+	text-align: center;
+	color: green;
+	display: none;
+}
+
+#user-not-found {
+	text-align: center;
+	color: red;
+	display: none;
+}
+
+#successfully-logged-in {
+	text-align: center;
+	color: green;
+	display: none;
+}
+
 
 /* Custom Media Queries */
 @media (max-width: 400px) {
@@ -1194,6 +1212,14 @@ body {
 	.movie-rating > span {
 		font-size: 20px;
 		font-weight: 900;
+	}
+
+	.footer {
+		padding: 20px 0px;
+	}
+
+	.footer-item-container {
+		padding: 10px;
 	}
 }
 
