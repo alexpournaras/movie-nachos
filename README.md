@@ -8,4 +8,6 @@ TODO:
 
 - Fix css and classes of login and registration forms
 - Compress login/register background image
-- Replace socials from header with the login/register buttons
+- Add local storage actions for all forms
+- Fix margins of footer
+- Change subscription text

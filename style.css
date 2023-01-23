@@ -1479,9 +1479,10 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #999;
-    font-size: 23px;
+    color: orange;
+    font-size: 15px;
     transition: all 0.2s ease;
+	padding-left: 10px;
 }
 
 .input-field input:is(:focus, :valid) ~ i{
