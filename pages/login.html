@@ -8,7 +8,6 @@
 	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="../style.css">
 	<script src="../script.js"></script>
-	<script src="../scripts/login-register.js"></script>
 </head>
 
 <body>
@@ -25,17 +24,16 @@
 				<li class="menu-item"><a class="menu-link" href="./movies.html">Movies</a></li>
 				<li class="menu-item"><a class="menu-link" href="./actors.html">Actors</a></li>
 				<li class="menu-item"><a class="menu-link" href="./news.html">News</a></li>
+				<li class="menu-item login-register-link"><a class="menu-link" href="./login.html">Login</a></li>
+				<li class="menu-item login-register-link"><a class="menu-link" href="./register.html">Register</a></li>
 			</ul>
 		</nav>
-		<div class="header-social">
-			<a class="social-link">
-				<i class="fa fa-facebook"></i>
+		<div class="header-login-register">
+			<a href="./login.html">
+				<button type="button" class="header-login-register-button">Login</button>
 			</a>
-			<a class="social-link">
-				<i class="fa fa-twitter"></i>
-			</a>
-			<a class="social-link">
-				<i class="fa fa-instagram"></i>
+			<a href="./register.html">
+				<button type="button" class="header-login-register-button">Register</button>
 			</a>
 		</div>
 	</header>
@@ -44,7 +42,7 @@
 		<section class="login-register-section">
 			<div class="container">
 				<div class="forms">
-					<div id="login-form" class="form login fade">
+					<div id="login-form" class="form login">
 						<span class="title">Login</span>
 		
 						<form action="#">
@@ -78,48 +76,7 @@
 							</span>
 						</div>
 					</div>
-		
-					<!-- Registration Form -->
-					<div id="signup-form" class="form signup fade" style="display: none">
-						<span class="title">Registration</span>
-		
-						<form action="#">
-							<div class="input-field">
-								<input type="text" placeholder="Enter your name" required>
-								<i class="uil uil-user"></i>
-							</div>
-							<div class="input-field">
-								<input type="text" placeholder="Enter your email" required>
-								<i class="uil uil-envelope icon"></i>
-							</div>
-							<div class="input-field">
-								<input type="password" class="password" placeholder="Create a password" required>
-								<i class="uil uil-lock icon"></i>
-							</div>
-							<div class="input-field">
-								<input type="password" class="password" placeholder="Confirm a password" required>
-								<i class="uil uil-lock icon"></i>
-								<i class="uil uil-eye-slash showHidePw"></i>
-							</div>
-		
-							<div class="checkbox-text">
-								<div class="checkbox-content">
-									<input type="checkbox" id="termCon">
-									<label for="termCon" class="text">I accepted all terms and conditions</label>
-								</div>
-							</div>
-		
-							<div class="input-field button">
-								<input type="button" value="Signup">
-							</div>
-						</form>
-		
-						<div class="login-signup">
-							<span class="text">Already a member?
-								<a href="#" id="login-button" class="text login-link">Login Now</a>
-							</span>
-						</div>
-					</div>
+
 				</div>
 			</div>
         </section>
