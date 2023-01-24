@@ -631,6 +631,7 @@ body {
 
 .copyright {
 	font-size: 14px;
+	padding: 0px 10px;
 }
 
 .copyright-title {
@@ -862,7 +863,7 @@ body {
 	background-color: var(--main-color);
 }
 
-.movie-content-section, .movie-cast-section, .similar-movies-section, .actor-content-section, .more-actors-section, .actors-known-for-section {
+.movie-content-section, .movie-cast-section, .similar-movies-section, .actor-content-section, .more-actors-section, .actors-known-for-section, .news-section {
 	padding: 20px 200px 0px 200px;
 	min-width: 305px;
 }
@@ -898,7 +899,7 @@ body {
 	font-weight: 900;
 }
 
-.movie-poster-trailer, .actor-poster-trailer {
+.movie-poster-trailer, .actor-poster-trailer, .article-image-container {
 	display: flex;
 	max-height: 500px;
 }
@@ -908,24 +909,28 @@ body {
 	padding: 10px;
 }
 
+.article-image-container > img {
+	width: 100%;
+}
+
 .movie-trailer, .actor-trailer {
 	width: 75%;
 	padding: 10px;
 }
 
-.movie-section-title, .more-actors-section-title, .actors-known-for-section-title, .actor-section-title {
+.movie-section-title, .more-actors-section-title, .actors-known-for-section-title, .actor-section-title, .article-title {
 	border-left: 2px solid orange;
 	padding-left: 5px;
 	font-size: 30px;
 }
 
-.movie-plot-container, .actor-biography-container {
+.movie-plot-container, .actor-biography-container, .article-content {
 	padding: 0px 20px;
 	padding-bottom: 20px;
 	border-bottom: 1px solid hsla(0,0%,100%,0.2);
 }
 
-.movie-plot, .actor-biography {
+.movie-plot, .actor-biography, .article-paragraph {
 	font-size: 20px;
 }
 
@@ -995,7 +1000,7 @@ body {
 	padding-bottom: 20px !important;
 }
 
-.actor-biography-link {
+.actor-biography-link, .article-link {
 	font-size: 20px;
     text-decoration: none;
     color: var(--link-color);
@@ -1026,8 +1031,6 @@ body {
 	display: none;
 }
 
-
-/* TODO: */
 .form-container {
     position: relative;
     max-width: 430px;
@@ -1173,6 +1176,30 @@ body {
     text-align: center;
 }
 
+.latest-news-container {
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.show-more-news-container {
+	text-align: center;
+	margin: 20px;
+}
+
+.more-news-button {
+	background: var(--linear-gradient);
+	border: none;
+	color: var(--text-color);
+	padding: 10px;
+	border-radius: 10px;
+	font-weight: 600;
+	margin: 10px 0px;
+	cursor: pointer;
+	min-width: 110px;
+	margin: 6px;
+}
+
 
 /* Custom Media Queries */
 @media (max-width: 400px) {
@@ -1193,6 +1220,10 @@ body {
 
 	.footer-contact-us-textarea {
 		font-size: 10px;
+	}
+
+	.article-title {
+		font-size: 18px !important;
 	}
 }
 
@@ -1228,7 +1259,7 @@ body {
 		margin-left: 0px;
 	}
 
-	.movie-poster-trailer, .actor-poster-trailer {
+	.movie-poster-trailer, .actor-poster-trailer, .article-image-container {
 		display: block;
 		max-height: unset;
 	}
@@ -1244,7 +1275,7 @@ body {
 		height: 300px;
 	}
 
-	.movie-plot, .actor-biography {
+	.movie-plot, .actor-biography, .actor-biography-link, .article-paragraph, .article-link {
 		font-size: 15px;
 	}
 
@@ -1252,7 +1283,7 @@ body {
 		display: block;
 	}
 
-	.movie-plot-container, .actor-biography-container {
+	.movie-plot-container, .actor-biography-container, .article-content {
 		padding: 0px 0px 20px 0px;
 	}
 
@@ -1368,6 +1399,10 @@ body {
 	.footer-item-container {
 		padding: 10px;
 	}
+
+	.article-title {
+		font-size: 25px;
+	}
 }
 
 @media (max-width: 1100px) {
@@ -1442,7 +1477,7 @@ body {
 		font-size: 13px;
 	}
 
-	.movie-content-section, .movie-cast-section, .similar-movies-section, .actor-content-section, .more-actors-section, .actors-known-for-section {
+	.movie-content-section, .movie-cast-section, .similar-movies-section, .actor-content-section, .more-actors-section, .actors-known-for-section, .news-section {
 		padding: 20px 30px 0px 30px;
 	}
 }
